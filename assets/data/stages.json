@@ -1,66 +1,82 @@
 [
   {
     "name": "The Beat-Herder Stage",
+    "slug": "the-beatherder-stage",
     "description": "Herd 'em up! The flagship arena, the throbbing heart of our little Shire and the place to be if you want to see the biggest and brightest stars, cherry-picked for your pleasure from the local, national and international pantheons."
   },
   {
     "name": "Toil Trees",
+    "slug": "toil-trees",
     "description": "These woods are near and dear to our hearts – the birthplace of Beat-Herder, back when a bit of foliage camouflage was a necessary measure... Come and channel your inner wood-sprite with Bacchic beat-chasing through the night; aided by a whole host of turntable shamans and the soft, dappling glow of the loveliest light show EVER, anywhere."
   },
   {
     "name": "The Fortress",
+    "slug": "the-fortress",
     "description": "If you think you've got what it takes, head to that bloody great thing called The Fortress for a serious showdown sesh, where all things breaks, beats, techno and house bounce off the corrugated metal (recycled and reborn through the ardour of the noble souls who rebuild it each year!) and reverberate through the dancing-compacted ground right up your spine. Join the ranks of the barmy bass-face army and get storming those walls like it's war."
   },
   {
     "name": "The Ring",
+    "slug": "the-ring",
     "description": "Witness the immense geologic structure know as The Ring, a feat of primitive human engineering that puts Stonehenge – indeed, even the Pyramids – to shame, and wonder: which prehistoric barmpot could have performed such a feat? We'll tell ya who: our Pratty did it, with his superhuman strength and shovel-like mitts. This sacred site is the arena for the Herder tribe's ancient rituals of music and dance and therefore must be respected; no climbing up the bankings lest the spirits be disturbed (and muppets sent home). All genres converge in this magical melting pot of past, present and future – the only commandment is to have a smashing time!"
   },
   {
     "name": "Stumblefunk at the Factory",
+    "slug": "stumblefunk-factory",
     "description": "Hold onto your hard hats – the naughty corner just got a whole lot naughtier! Stumblefunk, those lovable rogues, have snuck into our factory! Under the cover of night, these mischievous freeparty fanatics slapped a section 6 notice on the door, smuggled in their gear, and set up their sound system, bringing the place alive with swaggering beats and staggering basslines. Clock in for a shift of serious shenanigans – it’s the ultimate party heist!"
   },
   {
     "name": "BH&DWMSC",
+    "slug": "working-mens-club",
     "description": "Ey up cockers! Sick of all this rave rubbish? Get thi sen down to the Working Mens’ for a good dose of the old skool craic. Local bands, proper pints of bitter and some no-bollocks folk and rock will come as a welcome antidote to all that chuffin' dance music the nippers are into. Whether you're after variety acts, bingo or a bit o' summat blue to keep your dad quiet, the BH&DWMSC will get you back in touch with yer inner miner without the dire life expectancy."
   },
   {
     "name": "Smoky Tentacles",
+    "slug": "smoky-tentacles",
     "description": "Where fractal coils of smoke add to the thick heady fog of shisha fumes, you can lounge like a desert sheik on fine cushions and rugs and feast on exquisite coffee and cakes or take another puff on the bubbling pipe. A place to gather your scattered selves back in a moment of tranquillity, with the finest acoustic acts, dubbed-out poetry and downbeat sounds with swirled and psyched-out visuals from our resident DJs and VJs. When the sun goes down things get a bit more uptempo and the tentacles start to wriggle..."
   },
   {
     "name": "Bushrocker Hi-Fi",
+    "slug": "bushrocker-hi-fi",
     "description": "Roots and reggae HQ for all you bassbin junkies out there who live for that gut-wobbling sub-dub sensation. Head to Bushrocker to get a whiff of pungent good vibrations – all smiles here in this little slice of paradise."
   },
   {
     "name": "The Snug",
+    "slug": "the-snug",
     "description": "Get all cosied up in the warm, slightly perspiring embrace of The Snug, our most intimate venue. Thick wafts of funk, soul, pop, and dance will smother you with good vibes in Grandma’s lounge."
   },
   {
     "name": "The Parish Church",
+    "slug": "the-parish-church",
     "description": "Hallelujah! I am the lord of the dance said he, and it's time to show some devotional spirit amongst the wonkiest congregation ever to grace the pews. Sing, dance and rejoice – the worshipping never ends in this parish. Get that halo polished!"
   },
   {
     "name": "Sunrise",
+    "slug": "sunrise",
     "description": "Come get your glow on and salute the giver of all life with the Sunrise crew, in a truly mind-illuminating experience. With their tip-top production values and extensive experience in throwing the wildest parties, the sun has definitely got his hat on as this pocket of psychedelia incorporates the mighty Opus Sound System (complete with a dappling of UV eye candy!), beaming out warm rays of psybreak, chilled tunes and sassy stomp. You'll be left feeling radiant – and if you're lucky you might even get your hide tanned!"
   },
   {
     "name": "Bubba Gumma",
+    "slug": "bubba-gumma",
     "description": "Keep chewing till your cheeks are sore, then blow a big one and let it pop... Leanne and her bubbly buddies will get you masticating all your blues away in their plastic package of sticky-sweet fulfilment. Just remember not to swallow."
   },
   {
     "name": "The Launderette",
+    "slug": "launderette",
     "description": "Rinse away the stains from your soul with a hot wash of Beat-Herder non-bio in The Launderette, where dirty beats meet dirty briefs. Live acts and DJs to soap up your lugs with a mix of hardcore, dance, rock, techno and electronica. Proudly presented by Young Thugs, a quick spin through this swirling world of bubbles, blouses and bangers will put some suds in your duds. Machine wash on high. Do not iron. Drip-dry recommended."
   },
   {
     "name": "The Garage",
+    "slug": "the-garage",
     "description": "Get your axle greased at this vinyl-only pit stop for boy racers, sheila-wheelers and mean mother truckers! Whether it's a quick tune-up or a proper working over you need, the mucky mechanics have the tools and the tunes to get you all revved and purring once again."
   },
   {
     "name": "Julies Barn",
+    "slug": "julies-barn",
     "description": "Finding it's the tricky part but you'll damn well know when you're inside Julie's joint. Check your inhibitions at the door of this boudoir of bedlam, where the floor tiles flash and the disco ball keeps on spinning til sunrise."
   },
   {
     "name": "Hotel California",
+    "slug": "hotel-california",
     "description": "Some dance to remember, some dance to forget – but in this grand old palace of the Wild (North)West, you don't need a reason to get your hind quarters shaking like a stallion's. Sip cocktails and reminisce about the gold rush days, or get your spurs on for a gunslingin' good time..."
   }
 ]
