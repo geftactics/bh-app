@@ -15,6 +15,7 @@ export default function TabTwoScreen() {
   useEffect(() => {
     AsyncStorage.getItem('stages').then((json) => {
       if (json) {
+        console.log(json)
         setStages(JSON.parse(json));
       }
       setLoading(false);
@@ -40,7 +41,7 @@ export default function TabTwoScreen() {
         <ThemedText type="title">Stages</ThemedText>
       </ThemedView>
       <ThemedText>This page will be stages list</ThemedText>
-       <ScrollView contentContainerStyle={{ padding: 16 }}>
+       <ScrollView contentContainerStyle={{ padding: 0 }}>
         {stages.map((stage) => (
           <StageCard key={stage.slug} name={stage.name} slug={stage.slug} />
         ))}

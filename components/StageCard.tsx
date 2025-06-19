@@ -2,7 +2,7 @@
 
 import { logoMap, photoMap } from '@/constants/StageImages';
 import { useRouter } from 'expo-router';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 export default function StageCard({ name, slug }: { name: string; slug: string }) {
   const router = useRouter();
@@ -12,9 +12,6 @@ export default function StageCard({ name, slug }: { name: string; slug: string }
       <View style={styles.card}>
         <Image source={photoMap[slug]} style={styles.image} />
         <Image source={logoMap[slug]} style={styles.logoOverlay} />
-        <View style={styles.titleBox}>
-          <Text style={styles.title}>{name} {slug}</Text>
-        </View>
       </View>
     </TouchableOpacity>
   );
@@ -23,7 +20,8 @@ export default function StageCard({ name, slug }: { name: string; slug: string }
 const styles = StyleSheet.create({
   card: {
     position: 'relative',
-    height: 200,
+    height: 100,
+    width: '100%',
     marginBottom: 20,
     borderRadius: 12,
     overflow: 'hidden',
@@ -32,11 +30,18 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
-  overlay: {
+  logoOverlay: {
     position: 'absolute',
     width: '100%',
     height: '100%',
     resizeMode: 'contain',
+    shadowColor: '#000',
+    shadowOffset: { width: 5, height: 2 },
+    shadowOpacity: 1,
+    shadowRadius: 3,
+    elevation: 5,
+    padding: 10
+
   },
   titleBox: {
     position: 'absolute',

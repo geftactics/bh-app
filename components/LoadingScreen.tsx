@@ -10,7 +10,6 @@ export default function LoadingScreen() {
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
       <ActivityIndicator size="large" color={theme.tint} />
-      <br/>
       <Text style={[styles.text, { color: theme.text }]}>Loading Beat-Herder magic...</Text>
     </View>
   );
