@@ -47,7 +47,7 @@ export default function TabTwoScreen() {
     >
       {uniqueArtists.map((artist) => (
         <ArtistCard
-          key={artist.slug}
+          key={artist.artist.replace(/\s+/g, '_')}
           name={artist.artist}
           slug={artist.artist.replace(/\s+/g, '_')}
           genre={artist.genre}
