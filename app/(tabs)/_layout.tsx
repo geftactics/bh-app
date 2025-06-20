@@ -24,6 +24,12 @@ export default function TabLayout() {
           },
           default: {},
         }),
+      }}
+      screenListeners={{
+        tabPress: (e) => {
+          console.log('tab pressed:', e.target);
+          // Here you could send an event via context or state to child screens
+        },
       }}>
       <Tabs.Screen
         name="index"
