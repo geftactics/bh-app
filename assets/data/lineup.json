@@ -7,7 +7,8 @@
     "venue": "the-factory",
     "artist": "Voltage Vandal",
     "description": "Raging electro bangers straight out of the rave crypt.",
-    "genre": "Electro"
+    "genre": "Electro",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "thu-factory-2330",
@@ -17,7 +18,8 @@
     "venue": "the-factory",
     "artist": "BootLoop",
     "description": "Machine funk meets glitchy breaks in a twisted hybrid set.",
-    "genre": "Breakbeat"
+    "genre": "Breakbeat",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "thu-factory-0030",
@@ -27,7 +29,8 @@
     "venue": "the-factory",
     "artist": "Reckless Modules",
     "description": "Analog acid and modular madness till the lights come up.",
-    "genre": "Acid Techno"
+    "genre": "Acid Techno",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "thu-factory-0200",
@@ -37,7 +40,8 @@
     "venue": "the-factory",
     "artist": "Neon Trolley",
     "description": "A synth-drenched journey through cosmic disco and retro wave.",
-    "genre": "Synthwave"
+    "genre": "Synthwave",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
 
   {
@@ -48,7 +52,8 @@
     "venue": "the-garage",
     "artist": "Yard Skanker",
     "description": "Pure sound system pressure from the heart of Kingston.",
-    "genre": "Dancehall / Reggae"
+    "genre": "Dancehall / Reggae",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "thu-garage-2330",
@@ -58,7 +63,8 @@
     "venue": "the-garage",
     "artist": "808 Gremlin",
     "description": "Sludgy trap beats and haunted subs.",
-    "genre": "Trap / Experimental"
+    "genre": "Trap / Experimental",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "thu-garage-0030",
@@ -68,7 +74,8 @@
     "venue": "the-garage",
     "artist": "Flex Unit",
     "description": "B2B2B jungle warriors tearing up the night.",
-    "genre": "Jungle"
+    "genre": "Jungle",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "thu-garage-0200",
@@ -78,7 +85,8 @@
     "venue": "the-garage",
     "artist": "System Hackers",
     "description": "Raw hardcore and distorted rave nostalgia.",
-    "genre": "Hardcore"
+    "genre": "Hardcore",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
 
   {
@@ -89,7 +97,8 @@
     "venue": "the-fortress",
     "artist": "Drill Sergeant",
     "description": "Dark 140 riddims with a military edge.",
-    "genre": "Drill / Grime"
+    "genre": "Drill / Grime",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "thu-fortress-2330",
@@ -99,7 +108,8 @@
     "venue": "the-fortress",
     "artist": "CR8 Digga",
     "description": "Rare grooves, deep cuts, and funky edits from the vault.",
-    "genre": "Funk / Disco"
+    "genre": "Funk / Disco",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "thu-fortress-0030",
@@ -109,7 +119,8 @@
     "venue": "the-fortress",
     "artist": "Night Throttle",
     "description": "Bassline, speed garage, and turbo-charged chaos.",
-    "genre": "Speed Garage"
+    "genre": "Speed Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "thu-fortress-0200",
@@ -119,7 +130,8 @@
     "venue": "the-fortress",
     "artist": "Echo Static",
     "description": "Dub techno wizardry for the warehouse heads.",
-    "genre": "Dub Techno"
+    "genre": "Dub Techno",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
 
   {
@@ -130,7 +142,8 @@
     "venue": "the-factory",
     "artist": "Bitrate Beast",
     "description": "Glitchy IDM and lo-fi rave textures.",
-    "genre": "IDM / Glitch"
+    "genre": "IDM / Glitch",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "fri-factory-2330",
@@ -140,7 +153,8 @@
     "venue": "the-factory",
     "artist": "Snarelord",
     "description": "Hyper drumfunk to stretch your mind and ankles.",
-    "genre": "Drum & Bass"
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "fri-factory-0030",
@@ -150,7 +164,8 @@
     "venue": "the-factory",
     "artist": "Kosmische Club",
     "description": "Deep synth explorations from beyond the veil.",
-    "genre": "Ambient / Techno"
+    "genre": "Ambient / Techno",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "fri-factory-0200",
@@ -160,7 +175,8 @@
     "venue": "the-factory",
     "artist": "Kickdrum Cavalry",
     "description": "Four-to-the-floor and no surrender.",
-    "genre": "Hard Techno"
+    "genre": "Hard Techno",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
 
   {
@@ -171,7 +187,8 @@
     "venue": "the-garage",
     "artist": "Dubbinz",
     "description": "Echo chamber business with fat subs and phasers.",
-    "genre": "Dub"
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "fri-garage-2330",
@@ -181,7 +198,8 @@
     "venue": "the-garage",
     "artist": "Mad Rascal",
     "description": "Clownstep nostalgia meets future jungle.",
-    "genre": "Drum & Bass"
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "fri-garage-0030",
@@ -191,7 +209,8 @@
     "venue": "the-garage",
     "artist": "MC Binary",
     "description": "Chip tunes and grime bars, a digital riot.",
-    "genre": "Chiptune / Grime"
+    "genre": "Chiptune / Grime",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "fri-garage-0200",
@@ -201,7 +220,8 @@
     "venue": "the-garage",
     "artist": "Grotstep General",
     "description": "Distorted sub swamp from the end of the world.",
-    "genre": "Dubstep"
+    "genre": "Dubstep",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
 
   {
@@ -212,7 +232,8 @@
     "venue": "the-fortress",
     "artist": "Plasmatic",
     "description": "Industrial club noise for the brave.",
-    "genre": "EBM / Industrial"
+    "genre": "EBM / Industrial",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "fri-fortress-2330",
@@ -222,7 +243,8 @@
     "venue": "the-fortress",
     "artist": "Sir Loopalot",
     "description": "Live looping chaos and crowd-controlled chaos.",
-    "genre": "Live / Experimental"
+    "genre": "Live / Experimental",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "fri-fortress-0030",
@@ -232,7 +254,8 @@
     "venue": "the-fortress",
     "artist": "The Sludge God",
     "description": "A crawl through 20Hz fog and dystopian breaks.",
-    "genre": "Sludge / Bass"
+    "genre": "Sludge / Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
     "uid": "fri-fortress-0200",
@@ -242,6 +265,7 @@
     "venue": "the-fortress",
     "artist": "Kickback Klub",
     "description": "Tech-house flavours and cosmic detours.",
-    "genre": "House / Techno"
+    "genre": "House / Techno",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   }
 ]

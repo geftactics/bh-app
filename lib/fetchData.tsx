@@ -2,21 +2,45 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export async function fetchData() {
   const controller = new AbortController();
-
-  // Timeout logic (10 seconds)
   const timeoutId = setTimeout(() => controller.abort(), 10 * 1000);
 
+  const urls = {
+    stages: 'https://raw.githubusercontent.com/geftactics/bh-app/refs/heads/main/assets/data/stages.json',
+    lineup: 'https://raw.githubusercontent.com/geftactics/bh-app/refs/heads/main/assets/data/lineup.json',
+  };
+
   try {
-    const res = await fetch('https://raw.githubusercontent.com/geftactics/bh-app/refs/heads/main/assets/data/stages.json', {
-      signal: controller.signal,
-    });
-    const data = await res.json();
-    await AsyncStorage.setItem('stages', JSON.stringify(data));
-    return data;
+    // Fetch both in parallel
+    const [stagesRes, lineupRes] = await Promise.all([
+      fetch(urls.stages, { signal: controller.signal }),
+      fetch(urls.lineup, { signal: controller.signal }),
+    ]);
+
+    const [stages, lineup] = await Promise.all([
+      stagesRes.json(),
+      lineupRes.json(),
+    ]);
+
+    // Cache both
+    await AsyncStorage.setItem('stages', JSON.stringify(stages));
+    await AsyncStorage.setItem('lineup', JSON.stringify(lineup));
+
+    return { stages, lineup };
   } catch (err) {
-    const cached = await AsyncStorage.getItem('stages');
-    if (cached) return JSON.parse(cached);
-    else throw new Error('Unable to load data');
+    // Fallback to cached data
+    const [stagesCached, lineupCached] = await Promise.all([
+      AsyncStorage.getItem('stages'),
+      AsyncStorage.getItem('lineup'),
+    ]);
+
+    if (stagesCached && lineupCached) {
+      return {
+        stages: JSON.parse(stagesCached),
+        lineup: JSON.parse(lineupCached),
+      };
+    }
+
+    throw new Error('Unable to load data');
   } finally {
     clearTimeout(timeoutId);
   }
