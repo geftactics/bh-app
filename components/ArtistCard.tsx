@@ -58,16 +58,16 @@ export default function ArtistCard({
 const styles = StyleSheet.create({
   cardContainer: {
     width: '100%',
-    marginBottom: 1,
+    marginBottom: 0,
   },
   card: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 1,
+    padding: 0,
   },
   imageContainer: {
-    width: 80,
-    height: 80,
+    width: 60,
+    height: 60,
     borderRadius: 12,
     overflow: 'hidden',
     backgroundColor: '#eee',
@@ -98,6 +98,6 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: '#ccc',
     marginHorizontal: 10,
-    marginTop: 18,
+    marginTop: 15,
   },
 });

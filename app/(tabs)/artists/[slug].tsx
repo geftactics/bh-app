@@ -1,3 +1,4 @@
+import PerformanceCard from '@/components/PerformanceCard';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -5,35 +6,43 @@ import { Stack, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
+
 export default function ArtistDetail() {
   const colorScheme = useColorScheme();
-  const [error, setError] = useState(false);
   const theme = Colors[colorScheme];
   const { slug } = useLocalSearchParams<{ slug: string }>();
 
-  const [artists, setArtists] = useState<any[]>([]);
+  const [entries, setEntries] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     AsyncStorage.getItem('lineup').then((json) => {
       if (json) {
-        setArtists(JSON.parse(json));
+        setEntries(JSON.parse(json));
       }
       setLoading(false);
     });
   }, []);
 
-  const artist = artists.find((s) => s.artist.replace(/\s+/g, '_') === slug);
+  const artistName = slug?.replace(/_/g, ' ');
+  const artistPerformances = entries.filter((e) => e.artist === artistName);
+
+  const artist = artistPerformances[0]; // use first performance for image/description etc
+
+  const sortedPerformances = [...artistPerformances].sort((a, b) => {
+    const dayDiff = dayOrder.indexOf(a.day) - dayOrder.indexOf(b.day);
+    return dayDiff !== 0 ? dayDiff : parseInt(a.start) - parseInt(b.start);
+  });
 
   return (
     <>
       <Stack.Screen
         options={{
-          title: artist?.artist || 'Artist',
+          title: '',
           headerBackTitle: 'Back',
-          headerStyle: {
-            backgroundColor: 'black',
-          },
+          headerStyle: { backgroundColor: 'black' },
           headerTintColor: 'white',
         }}
       />
@@ -48,9 +57,7 @@ export default function ArtistDetail() {
         </View>
       ) : (
         <ScrollView contentContainerStyle={[styles.container, { backgroundColor: theme.background }]}>
-          {/* Top Row: Image + Pink Box */}
           <View style={styles.topRow}>
-            {/* Artist Image */}
             <View style={styles.imageContainer}>
               <Image
                 source={
@@ -64,16 +71,27 @@ export default function ArtistDetail() {
               />
             </View>
 
-            {/* Pink Box with Artist Name */}
             <View style={styles.pinkBox}>
               <Text style={styles.artistName}>{artist.artist}</Text>
             </View>
           </View>
 
-          {/* Space for performance detail card */}
-          <View style={styles.performanceCard}>
-            <Text style={styles.performanceText}>Performance details go here...</Text>
-          </View>
+          {artist.description && (
+            <View style={styles.descriptionContainer}>
+              <Text>{artist.description}</Text>
+            </View>
+          )}
+
+          {sortedPerformances.map((performance) => (
+            <PerformanceCard
+              key={performance.uid}
+              day={performance.day}
+              start={performance.start}
+              end={performance.end}
+              venue={performance.venue}
+              description={performance.description}
+            />
+          ))}
         </ScrollView>
       )}
     </>
@@ -92,10 +110,9 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     width: '50%',
-    aspectRatio: 1, // square
-    borderRadius: 0,
-    overflow: 'hidden',
+    aspectRatio: 1,
     backgroundColor: '#eee',
+    overflow: 'hidden',
   },
   image: {
     width: '100%',
@@ -103,10 +120,8 @@ const styles = StyleSheet.create({
   },
   pinkBox: {
     width: '50%',
-    height: undefined,
-    aspectRatio: 1, // same square size as image
-    backgroundColor: '#E30083', // pink
-    borderRadius: 0,
+    aspectRatio: 1,
+    backgroundColor: '#E30083',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -117,25 +132,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 10,
   },
-  performanceCard: {
-    backgroundColor: '#222',
-    borderRadius: 12,
-    padding: 16,
-    // Add shadow or elevation if you want:
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  performanceText: {
-    fontSize: 16,
-    color: 'black',
+  descriptionContainer: {
+    marginHorizontal: 18,
+    marginBottom: 10,
   },
   title: {
     fontSize: 22,
     fontWeight: 'bold',
-    marginBottom: 8,
     textAlign: 'center',
   },
   error: {
