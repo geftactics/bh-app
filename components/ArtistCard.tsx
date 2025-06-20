@@ -1,22 +1,43 @@
 import { MaterialIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { useState } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default function ArtistCard({ name, slug, genre }: { name: string; slug: string; genre: string }) {
+export default function ArtistCard({
+  name,
+  slug,
+  genre,
+  image,
+}: {
+  name: string;
+  slug: string;
+  genre: string;
+  image: string;
+}) {
   const router = useRouter();
+  const [error, setError] = useState(false);
 
   return (
-    <TouchableOpacity onPress={() => router.push(`/artists/${slug}`)} style={styles.cardContainer}>
+    <TouchableOpacity
+      onPress={() => router.push(`/artists/${slug}`)}
+      style={styles.cardContainer}
+    >
       <View style={styles.card}>
-        {/* Left: Image Placeholder */}
+        {/* Left: Image with fallback */}
         <View style={styles.imageContainer}>
           <Image
-            source={{ uri: 'https://via.placeholder.com/80' }} // Replace with real image URL if available
+            source={
+              error || !image
+                ? require('../assets/images/placeholder.jpg') 
+                : { uri: image }
+            }
             style={styles.image}
+            onError={() => setError(true)}
+            resizeMode="cover"
           />
         </View>
 
-        {/* Center: Artist Name */}
+        {/* Center: Artist Name and Genre */}
         <View style={styles.nameContainer}>
           <Text style={styles.nameText}>{name}</Text>
           <Text style={styles.genreText}>{genre}</Text>

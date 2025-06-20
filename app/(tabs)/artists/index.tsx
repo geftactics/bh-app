@@ -46,7 +46,13 @@ export default function TabTwoScreen() {
       }
     >
       {uniqueArtists.map((artist) => (
-        <ArtistCard key={artist.slug} name={artist.artist} slug={artist.artist} genre={artist.genre} />
+        <ArtistCard
+          key={artist.slug}
+          name={artist.artist}
+          slug={artist.artist.replace(/\s+/g, '_')}
+          genre={artist.genre}
+          image={artist.image}
+        />
       ))}
     </ParallaxScrollView>
 
