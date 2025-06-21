@@ -34,7 +34,9 @@ export default function PerformanceCard({
       if (data) {
         const stages = JSON.parse(data);
         const match = stages.find((stage: any) => stage.slug === venue);
-        setFormattedVenue(match.name);
+        if (match) {
+          setFormattedVenue(match.name);
+        }
       }
     });
   }, [venue]);
@@ -71,7 +73,7 @@ export default function PerformanceCard({
   const handleCardPress = () => {
     const slug = artist.replace(/\s+/g, '_');
     if (!venue) {
-      router.push(`/artists/${slug}`, {withAnchor: true});
+      router.push(`/artists/${slug}`);
     }
   };
 
