@@ -11,6 +11,7 @@ export async function fetchData() {
 
   try {
     // Fetch both in parallel
+    console.log('Getting data...')
     const [stagesRes, lineupRes] = await Promise.all([
       fetch(urls.stages, { signal: controller.signal }),
       fetch(urls.lineup, { signal: controller.signal }),

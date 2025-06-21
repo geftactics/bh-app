@@ -1,6 +1,5 @@
 [
   {
-    "uid": "thu-factory-2200",
     "day": "Thursday",
     "start": "2200",
     "end": "2330",
@@ -21,7 +20,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "thu-factory-0030",
     "day": "Thursday",
     "start": "0030",
     "end": "0200",
@@ -32,7 +30,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "thu-factory-0200",
     "day": "Thursday",
     "start": "0200",
     "end": "0300",
@@ -44,7 +41,6 @@
   },
 
   {
-    "uid": "thu-garage-2200",
     "day": "Thursday",
     "start": "2200",
     "end": "2330",
@@ -55,7 +51,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "thu-garage-2330",
     "day": "Thursday",
     "start": "2330",
     "end": "0030",
@@ -66,7 +61,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "thu-laund-2330",
     "day": "Thursday",
     "start": "2130",
     "end": "2230",
@@ -77,7 +71,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "thu-garage-0030",
     "day": "Thursday",
     "start": "0030",
     "end": "0200",
@@ -88,7 +81,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "thu-garage-0200",
     "day": "Thursday",
     "start": "0200",
     "end": "0300",
@@ -100,7 +92,6 @@
   },
 
   {
-    "uid": "thu-fortress-2200",
     "day": "Thursday",
     "start": "2200",
     "end": "2330",
@@ -111,7 +102,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "thu-fortress-2330",
     "day": "Thursday",
     "start": "2330",
     "end": "0030",
@@ -122,7 +112,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "thu-fortress-0030",
     "day": "Thursday",
     "start": "0030",
     "end": "0200",
@@ -133,7 +122,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "thu-fortress-0200",
     "day": "Thursday",
     "start": "0200",
     "end": "0300",
@@ -145,7 +133,6 @@
   },
 
   {
-    "uid": "fri-factory-2200",
     "day": "Friday",
     "start": "2200",
     "end": "2330",
@@ -156,7 +143,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/art404.jpg"
   },
   {
-    "uid": "fri-factory-2330",
     "day": "Friday",
     "start": "2330",
     "end": "0030",
@@ -167,7 +153,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "fri-factory-0030",
     "day": "Friday",
     "start": "0030",
     "end": "0200",
@@ -178,7 +163,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "fri-factory-0200",
     "day": "Friday",
     "start": "0200",
     "end": "0300",
@@ -190,7 +174,6 @@
   },
 
   {
-    "uid": "fri-garage-2200",
     "day": "Friday",
     "start": "2200",
     "end": "2330",
@@ -201,7 +184,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "fri-garage-2330",
     "day": "Friday",
     "start": "2330",
     "end": "0030",
@@ -212,7 +194,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "fri-garage-0030",
     "day": "Friday",
     "start": "0030",
     "end": "0200",
@@ -223,7 +204,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "fri-garage-0200",
     "day": "Friday",
     "start": "0200",
     "end": "0300",
@@ -235,7 +215,6 @@
   },
 
   {
-    "uid": "fri-fortress-2200",
     "day": "Friday",
     "start": "2200",
     "end": "2330",
@@ -246,7 +225,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "fri-fortress-2330",
     "day": "Friday",
     "start": "2330",
     "end": "0030",
@@ -257,7 +235,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "fri-fortress-0030",
     "day": "Friday",
     "start": "0030",
     "end": "0200",
@@ -268,7 +245,6 @@
     "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
   },
   {
-    "uid": "fri-fortress-0200",
     "day": "Friday",
     "start": "0200",
     "end": "0300",
