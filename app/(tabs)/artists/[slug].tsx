@@ -84,7 +84,6 @@ export default function ArtistDetail() {
 
           {sortedPerformances.map((performance) => (
             <PerformanceCard
-              key={performance.uid}
               day={performance.day}
               start={performance.start}
               end={performance.end}
@@ -93,6 +92,7 @@ export default function ArtistDetail() {
               genre={performance.genre}
               description={performance.description}
               uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+              key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
             />
           ))}
         </ScrollView>

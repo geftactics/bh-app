@@ -9,6 +9,7 @@ type Props = {
   day: string;
   start: string;
   end: string;
+  genre: string;
   venue: string;
   description: string;
   artist: string;
@@ -31,7 +32,6 @@ export default function PerformanceCard({
   useEffect(() => {
     AsyncStorage.getItem('favourites').then((data) => {
       if (data) {
-        console.log(data)
         const favs = JSON.parse(data);
         setIsFavourite(favs.includes(uid));
       }
