@@ -26,6 +26,9 @@ export async function fetchData() {
     await AsyncStorage.setItem('stages', JSON.stringify(stages));
     await AsyncStorage.setItem('lineup', JSON.stringify(lineup));
 
+    //console.log(stages);
+    //console.log(lineup);
+
     return { stages, lineup };
   } catch (err) {
     // Fallback to cached data

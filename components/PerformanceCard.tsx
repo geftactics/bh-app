@@ -10,7 +10,7 @@ type Props = {
   start: string;
   end: string;
   genre: string;
-  venue: string;
+  venue?: string;
   description: string;
   artist: string;
 };
