@@ -71,7 +71,7 @@ export default function PerformanceCard({
   const handleCardPress = () => {
     const slug = artist.replace(/\s+/g, '_');
     if (!venue) {
-      router.push(`/artists/${slug}`);
+      router.push(`/artists/${slug}`, {withAnchor: true});
     }
   };
 
