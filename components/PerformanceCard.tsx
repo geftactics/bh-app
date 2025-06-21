@@ -27,6 +27,17 @@ export default function PerformanceCard({
 }: Props) {
   const router = useRouter();
   const [isFavourite, setIsFavourite] = useState(false);
+  const [formattedVenue, setFormattedVenue] = useState<string | null>(null);
+
+  useEffect(() => {
+    AsyncStorage.getItem('stages').then((data) => {
+      if (data) {
+        const stages = JSON.parse(data);
+        const match = stages.find((stage: any) => stage.slug === venue);
+        setFormattedVenue(match.name);
+      }
+    });
+  }, [venue]);
 
   // Check if performance is already in favourites
   useEffect(() => {
@@ -59,16 +70,18 @@ export default function PerformanceCard({
 
   const handleCardPress = () => {
     const slug = artist.replace(/\s+/g, '_');
-    router.push(`/artists/${slug}`);
+    if (!venue) {
+      router.push(`/artists/${slug}`);
+    }
   };
 
   return (
     <Pressable onPress={handleCardPress} style={styles.card}>
       <View style={styles.row}>
         <Text style={styles.heading}>
-          {venue ? `${venue}\n${day} - ` : ''}
+          {venue ? `${formattedVenue}\n${day} - ` : ''}
           {start}-{end}
-          {!venue ? ` – ${artist.replace(/-/g, ' ')} ` : ''} 
+          {!venue ? ` – ${artist.replace(/-/g, ' ')} ` : ''}
         </Text>
         <Pressable onPress={toggleFavourite} hitSlop={10}>
           <Ionicons
