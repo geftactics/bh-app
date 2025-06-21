@@ -89,7 +89,10 @@ export default function ArtistDetail() {
               start={performance.start}
               end={performance.end}
               venue={performance.venue}
+              artist={performance.artist}
+              genre={performance.genre}
               description={performance.description}
+              uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
             />
           ))}
         </ScrollView>

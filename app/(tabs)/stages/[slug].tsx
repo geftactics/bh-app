@@ -1,4 +1,5 @@
 // app/stages/[slug].tsx
+import PerformanceCard from '@/components/PerformanceCard';
 import { Colors } from '@/constants/Colors';
 import { logoMap, photoMap } from '@/constants/StageImages';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -13,6 +14,7 @@ export default function StageDetail() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
 
   const [stages, setStages] = useState<any[]>([]);
+  const [lineup, setLineup] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,7 +26,17 @@ export default function StageDetail() {
     });
   }, []);
 
+  useEffect(() => {
+    AsyncStorage.getItem('lineup').then((json) => {
+      if (json) {
+        setLineup(JSON.parse(json));
+      }
+      setLoading(false);
+    });
+  }, []);
+
   const stage = stages.find((s) => s.slug === slug);
+  const stagePerformances = lineup.filter((e) => e.venue === slug); 
 
   return (
     <>
@@ -54,6 +66,20 @@ export default function StageDetail() {
             <Image source={logoMap[slug]} style={styles.logoOverlay} />
           </View>
           <Text style={styles.description}>{stage.description}</Text>
+
+          {stagePerformances.map((performance) => (
+            <PerformanceCard
+              key={performance.uid}
+              day={performance.day}
+              start={performance.start}
+              end={performance.end}
+              artist={performance.artist}
+              genre={performance.genre}
+              description={performance.description}
+              uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+            />
+            ))}
+
         </ScrollView>
       )}
     </>
