@@ -66,8 +66,9 @@ export default function PerformanceCard({
     <Pressable onPress={handleCardPress} style={styles.card}>
       <View style={styles.row}>
         <Text style={styles.heading}>
-          {venue ? `${venue}, ${day} ` : ''}
-          {start}-{end} – {artist.replace(/-/g, ' ')}
+          {venue ? `${venue}\n${day} - ` : ''}
+          {start}-{end}
+          {!venue ? ` – ${artist.replace(/-/g, ' ')} ` : ''} 
         </Text>
         <Pressable onPress={toggleFavourite} hitSlop={10}>
           <Ionicons
