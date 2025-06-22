@@ -1,7 +1,16 @@
-import { Dimensions, StyleSheet, View } from 'react-native';
+import { Dimensions, Platform, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 
 export default function TabTwoScreen() {
+
+  if (Platform.OS === 'web') {
+    return (
+      <View>
+        <Text>Map is not available on web.</Text>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
       <MapView

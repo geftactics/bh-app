@@ -2,8 +2,9 @@ import ArtistCard from '@/components/ArtistCard';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
 import { useNavigation } from 'expo-router';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { ActivityIndicator, StyleSheet } from 'react-native';
 
 export default function TabTwoScreen() {
@@ -13,14 +14,27 @@ export default function TabTwoScreen() {
   const scrollRef = useRef<{ scrollTo: (params: { y: number; animated?: boolean }) => void }>(null);
   const navigation = useNavigation();
 
-  useEffect(() => {
-    AsyncStorage.getItem('lineup').then((json) => {
-      if (json) {
-        setArtists(JSON.parse(json));
-      }
-      setLoading(false);
-    });
-  }, []);
+  
+
+  useFocusEffect(
+    useCallback(() => {
+      let isActive = true;
+      console.log('artists....')
+      const loadData = async () => {
+        const json = await AsyncStorage.getItem('lineup');
+        if (json && isActive) {
+          setArtists(JSON.parse(json));
+          setLoading(false);
+        }
+      };
+
+      loadData();
+
+      return () => {
+        isActive = false;
+      };
+    }, [])
+  );
 
   artists.sort((a, b) => a.artist.localeCompare(b.artist));
   const uniqueArtists = Array.from(
