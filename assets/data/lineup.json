@@ -1,5 +1,1965 @@
 [
   {
+    "day": "Unknown",
+    "start": "0300",
+    "end": "0400",
+    "venue": "launderette",
+    "artist": "Black Kes",
+    "description": "Black Kes are four skiffling troubadours playing avant-guarde chicken in a basket tunes for your enjoyment. They've been described as 'a Poundland Flaming Lips' as well as 'the best and worst band I have ever seen in thirty-five years of rock and roll'.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1289.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "launderette",
+    "artist": "Cutty",
+    "description": "Cutty is a dynamic duo hailing from Hull, UK. The duo, comprised of Amy Precious, a singer and artist, and Kev La Kat, a multi-instrumentalist and producer, first crossed paths at Dive HU5, a local bar where Amy worked and Kev DJed. What started as a simple conversation led to a creative partnership when Amy asked Kev to help produce music for her upcoming art exhibition. Their shared love of 90s trip-hop, Björk, Beck, funkadelic, and electronic music quickly became the foundation for their collaboration. After a productive period of creating and releasing only a portion of their work, Cutty decided to take a break to refine their sound. Over the last year, they focused on creating a new batch of songs, picking the best to form their upcoming EP, Pump Funk. The first single, \"Ain’t Talking,\" and now \"One Shot\" is a glimpse into the dynamic duo’s evolution, with bold beats and unique production, signaling exciting things to come.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1768.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "launderette",
+    "artist": "Jodie Langford",
+    "description": "Jodie Langford is a firm staple of the Hull music scene and over the past year has become a festival showstopper and dominated stages across the UK with her unique blend of electro party punk. She’s here to have a good time and if you get it, you get it! She uses her ferocious voice and incredible wordplay to craft relatable, humorous tales tackling everything from downing pints, dead-end jobs, and the government, to more abstract concepts with instant shout along choruses. Always by her side is her trusted producer/DJ, Endoflevelbaddie, who channels her raw unfiltered energy and carves a sound that darts between thrashing Post Punk sensibilities, fevered Techno rhythms and filthy Drum & Bass chaos.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1505.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "launderette",
+    "artist": "ROTHCO",
+    "description": "From their genesis ROTHCO have embraced chaos and chemistry, fusing their wildly different tastes into something they've dubbed \"Technicolour New Wave\" - a heady blend of experimental grit, theatrical energy and melodic instinct that resists easy classification. Oozing with authenticity and big Yorkshire energy, their sound is an alluring blend of influences that impresses in it's effortless blending of elements from abrasive punk, brooding psychadelic, disco and gothic post-punk",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1760.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "launderette",
+    "artist": "The Caterpillar Spies",
+    "description": "Featuring current members and former members of  some of Hull’s best bands including LIFE, Fonda 500, Bunkerpop, Candid Faces, Chubby Mam, The Favours, Stuka and The Rocky Nest… The Caterpillar Spies play gentle, wonky songs about the inevitable reality of death, life and loving in the 21st century. With a colourful spectrum of slo-fi  instrumentation including finger picking guitar, bass, drums, violin, piano, cello, flute, melodica, glockenspiel, tap shoes, percussion and joyous group sing-a-longs… subtle and kind… The Caterpillar Spies echo the sounds of such luminaries as Belle & Sebastian, Gorky’s Zygotic Mynci and 3rd album era The Velvet Underground.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1764.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "launderette",
+    "artist": "Badly Dressed Boy",
+    "description": "*",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1763.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "launderette",
+    "artist": "Birkham",
+    "description": "Emo Dance Music DJ from Yorkshire",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1762.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "launderette",
+    "artist": "Bob Leyland",
+    "description": "A.K.A. Don Bobbio; the architect of Herbal Mafia - one of the UK's longest running beats / breaks / drum&bass club nights, bringing the beats since 2005. As well as co-founder of reggae veterans: Irie Vibes Sound System; and owner / manager of The Crescent Community Venue, based in York. Expect positive, vinyl-only vibrations from this Beat-Herder regular; ranging from homegrown hiphop and breaks, to bass heavy roots, reggae and dub, jam packed full of classic anthems and underground bangers!",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1766.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "launderette",
+    "artist": "Jono",
+    "description": "Jono is dedicated to spreading the universal energy of music. Always with a soulful and loving touch, and with the free spirit of Jazz as the absolute backbone of what he does - Jono has been selecting, curating, promoting and supporting independent music, artists and labels for over 25 years on the underground scene. Musicality and feeling drives what he loves the most – getting the music on. His 2 year BE MORE WELL monthly residency on Voices Radio (LDN) navigates Ambient, Jazz Forays, Electronic experiments, Field recordings, samples and spoken word, whilst at the club his ¡TROPICA! and Lift Your Feet parties give full dancefloor focus and energy release.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1498.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "launderette",
+    "artist": "Lord Gid",
+    "description": "DJ, dancer, dub freak, incompetent record collector, maker of good fun, believer in the power of community & music for over 30 years. Partly irresponsible for such delights as Normal, pigeonhold, Invisible College and the infamous, inglorious What the…? parties. Now fermenting low key chaos in the Midlands as part of Stranger Tractor.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1761.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "launderette",
+    "artist": "Sarah Tonin",
+    "description": "Jungle Drum and Bass DJ",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1767.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "launderette",
+    "artist": "Drooligan",
+    "description": "Electro-pop bangers and house grooves infused with humour. Beats, basslines, synths and soaring choruses. All smothered in found poetry pinched from the strangest of everyday of places. From the car parks of Scarborough to the back streets of Leeds.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1277.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "launderette",
+    "artist": "Mickey Nomimono",
+    "description": "Delivering visceral honesty over hard hitting, electronic punk out of Manchester UK: This is Mickey Nomimono.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1499.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "launderette",
+    "artist": "The Dyr Sister",
+    "description": "The Dyr Sister's Fairy-tales for the Modern Gentleman is an ever-growing compendium of anti-ballads chronicling the banality of modern existence. Combining contemporary folk with post-hiphop and electronic music genres the songs are delivered with driving percussive beats via a backdrop of strings and layered with haunting and ethereal vocal harmonies.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1496.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "launderette",
+    "artist": "The PlumberDrummer UK",
+    "description": "The PlumberDrummer UK, aka Nathan Robinson, is a British street performer and percussionist known for creating music using drainpipes and flip-flops. He deLivers energetic, interactive shows at events, international shows, schools, and public spaces, blending rhythm with entertainment.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1765.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "launderette",
+    "artist": "Dansu Furoa",
+    "description": "*",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1770.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "launderette",
+    "artist": "Deo",
+    "description": "York based DJ, founder of Chameleon.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1771.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "launderette",
+    "artist": "Ezy Ryder",
+    "description": "*",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1502.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "launderette",
+    "artist": "Hedstate",
+    "description": "Hedstate' The brain child of DJ Badly Dressed Boy and producer Just Joolz began back in York in 1998 and has undergone many transformations over the years. From humble beginnings as a jam between decks and an MPC through a full Live band to an album of mashups working along side Tom 'Tinkermuffin' Maynard. With Joolz now living in Vietnam, bouncing beats across the world and producing some of their best material to date. Who knows what the future will hold for the ever evolving Hedstate Collective! Watch this space!...and remember....if you still got em, you ain't hit rock bottom!  Hedstate's own Tinkermuffin & Badly Dressed Boy have been creating a series of Eclectic Downbeat, Loungecore mixes called Smoke Em If You Got Em over the last 10+ years. Currently working on Volume 28 of the series. Listen to these mixes and many more on their mixcloud page: www.mixcloud.com/Hedstate",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1769.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "launderette",
+    "artist": "Jarmouse",
+    "description": "DISCO FICTION // RAVE GAMES. Electro bangers and party chaos. Stories to dance to. Prizes to be won.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1504.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "launderette",
+    "artist": "Passmore Experience",
+    "description": "With a music collection spanning two decades and a deep love for all rhythmical beats. Sam Passmore revels in soapy things such as Disco, Electro, House, and Techno. Presume nothing and enjoy the foamy experience.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1773.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1700",
+    "end": "1800",
+    "venue": "launderette",
+    "artist": "Tinker Muffin",
+    "description": "Local York legend \"Tinkermuffin\" and co-founder of Mashed (which celebrates its 10th Birthday this year), has a huge musical background. Working for the BBC, producing fresh original tracks as well as remixing, editing, mash-ups and bootlegs. Not to mention the audio capturing, events archiving, sampling, repairing audio equipment and all the side projects he has on the go at any given time. Always a certified great set from the Tinkermuffin. Favourite genres include Reggae, Drum & Bass, Mashups, Party Edits, Bootlegs.... Co-Founder & Resident at MASHED, Crescent Community Venue, York. One half of the Drum & Bass duo Personal Space Invaders. Part of the long standing collective known as Hedstate. Resident at Jammin' @ Rise. Working this craft for 25+ years...!",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1494.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "launderette",
+    "artist": "Petrol Hoers",
+    "description": "High-energy rave punk fronted by a horse",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1293.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "launderette",
+    "artist": "Drummie Dave",
+    "description": "Global Music DJ – tropical roots to contemporary shoots",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1497.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "launderette",
+    "artist": "Mark Thompson",
+    "description": "Mark has been djing on the East Coast of UK for many years providing beats and rhythms from around world at Coastival and Musicport Festivals and also as part of Tropica djs and most recently with Disco Disposition dj collective. Expect music to move your feet and lift your soul.",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1507.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "launderette",
+    "artist": "Personal Space Invaders",
+    "description": "*",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1772.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "launderette",
+    "artist": "Yeastie Boy",
+    "description": "*",
+    "genre": "Punk",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1501.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "sunrise",
+    "artist": "ASHSTAFARI",
+    "description": "*",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1712.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "sunrise",
+    "artist": "Electrick Blue",
+    "description": "With her exquisite track selection, solid sense of groove and choice cutting edge psychedelic music, Electrick Blue has gained a well deserved reputation as a must see multi genre DJ all over the Northern UK psychedelic underground scene. She has performed at many festivals and events including Anthropos, Beatherder, Equinox, Solfest and more.",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1297.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "sunrise",
+    "artist": "Fuzzy Logic",
+    "description": "*",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1711.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "sunrise",
+    "artist": "Lost Element",
+    "description": "DJ and Producer since 2008, with a passion for psy prog, morning, melodic full-on and related styles of psychedelic trance.Founder of Elemental Psytrance, Resident for Crystal Kids, Remedy and Audioaddictz, and a regular booking for Sunrise and Tribal Sphere.",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist438.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "sunrise",
+    "artist": "Prognosis",
+    "description": "Geordie national treasure Craig (Aka Cosmouse) returns to the fields to spread some vintage cheese and in-date cream crackers.",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist440.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "sunrise",
+    "artist": "Tekno Hippie",
+    "description": "*",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1467.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "sunrise",
+    "artist": "Andy Mason",
+    "description": "International superstar DJ producer Andy Mason is back again to grace the Sunrise stage with his under-pants beats. He holds the title of DJ who has the least distance to travel and has been known to fire dance in his budgie smugglers. Now that’s not to be missed.",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist434.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "sunrise",
+    "artist": "Mellonskop",
+    "description": "Mellonskop has dedicated himself to collecting and playing only the highest grade music , his sets are filled with high energy sounds , always moving forward the blast way",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1463.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "sunrise",
+    "artist": "Mikki",
+    "description": "*",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1468.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "sunrise",
+    "artist": "Ramizes",
+    "description": "",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1695.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "sunrise",
+    "artist": "Thallom",
+    "description": "",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1694.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "sunrise",
+    "artist": "Edstorm",
+    "description": "Storming bowlerhat theamed psy trance from the one and only EDStorm",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1465.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "sunrise",
+    "artist": "Inner Cinema",
+    "description": "Residents of The Beats Bizarre, Inner Cinema are the audio visual collaboration between Magiclantern & Electrick Blue. Hailing from the northern wastelands, they play psytrance & psychedelic techno, combining impeccable tune selection with formidable visuals.",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1299.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "sunrise",
+    "artist": "MagicAura",
+    "description": "",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1701.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "sunrise",
+    "artist": "Magiclantern",
+    "description": "Magiclantern has been at the forefront of the UK psychedelic underground since before the turn of the century. His DJ and VJ residencies have included Cabbage, Kulu & Sunrise to name a few. He has had the pleasure VJ & DJ sets at many festivals and events including Ozora, Noisily, Anthropos, Solfest, All About Love.",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist247.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "sunrise",
+    "artist": "Mr Chukkel",
+    "description": "Mr Chukkel has been DJ’ing since 1996 and played his first festival back in 2008, since becoming a well-known face in the PSY-Trance festival and party scene . As well as PSY-Trance he likes to mix things up with some bouncy Tech-House, Deep Techno and Electro-Swing. Whatever he plays be sure to bring your dancing shoes.",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist244.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "sunrise",
+    "artist": "Mr Toad",
+    "description": "Playing the latest Psy-trance hits from a lily pad near\r\nyou...",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist250.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "sunrise",
+    "artist": "OSDJ",
+    "description": "",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1699.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "sunrise",
+    "artist": "Ed Tangent",
+    "description": "Sunrise front man Ed has been the main organiser for Sunrise forever and has been promoting the underground in the northwest from the early 90’s. His DJ career has remained solid throughout the past decades with a following throughout the UK and beyond.",
+    "genre": "Psy-Trance",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist242.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "the-parish-church",
+    "artist": "A Gift From God (Paul Taylor)",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1722.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "the-parish-church",
+    "artist": "Bash the Bible with Buck",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1720.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "the-parish-church",
+    "artist": "Church Coffee and Tombola with the Naughty Nuns",
+    "description": "Expect the unexpected. God will provide a tombolo, confession with the naughty nuns and high jinx.",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1480.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "the-parish-church",
+    "artist": "Ed's Cowbell congregation",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1721.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "the-parish-church",
+    "artist": "Father Blackburn",
+    "description": "Our Scouse Father, who art in Heaven, Hallowed be thy Rave. when Beat-Herder comes, this Scouse is the one! Expect an eclectic mix of dance floor bad boys to groove you into the heavens.",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist869.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "the-parish-church",
+    "artist": "Free Your Faith with Fred",
+    "description": "",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1718.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "the-parish-church",
+    "artist": "He is the messiah, he's Psychederek",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1723.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "the-parish-church",
+    "artist": "It's the Messiah Psychederek B2B with Brother Bobby Thorpe.",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1759.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "the-parish-church",
+    "artist": "Nancy The Communion Wafer",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1719.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "the-parish-church",
+    "artist": "The Beat-Herder Parish Church's Saturday Sermon",
+    "description": "Repent your sins! Raise your voices, throw your knickers in the air and be absolved! With Reverend Rave, the Beat-herder Church Choir and the naughty nuns join our wonky congregation for singing, dancing and general misbehaviour.",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist859.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1700",
+    "end": "1800",
+    "venue": "the-parish-church",
+    "artist": "The Body and Blood of Bush Rush",
+    "description": "",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1717.jpg"
+  },
+  {
+    "day": "Thursday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "the-parish-church",
+    "artist": "Benny the Baptist Vs Joe and his Technicolour Wet dream Coat",
+    "description": "This man has been showered in some unholy liquids and come out Baptised with a filthy beat. prepare for him to rain his blessings down on you, in the form a dirty drop!! This time the fluids will be flowing with the addition of Joesephs wet dream Coat.",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1478.jpg"
+  },
+  {
+    "day": "Thursday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "the-parish-church",
+    "artist": "God is a JDJ",
+    "description": "And tonight god is a JDJ! I cant get no sleep!",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1470.jpg"
+  },
+  {
+    "day": "Thursday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "the-parish-church",
+    "artist": "Reverend Rave and Mc Choir boy Quentin's Parish Party",
+    "description": "Thursday and Friday",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1472.jpg"
+  },
+  {
+    "day": "Thursday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "the-parish-church",
+    "artist": "The Confession Sisters",
+    "description": "Grab your rosary beads now and prepare to tell all of your sins, to Keighleys finest duo the confession sisters. AKA The Fusion Brothers.",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1471.jpg"
+  },
+  {
+    "day": "Thursday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "the-parish-church",
+    "artist": "The Religious Radish",
+    "description": "Thursday and Friday",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist867.jpg"
+  },
+  {
+    "day": "Thursday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "the-parish-church",
+    "artist": "The Tim Commandments",
+    "description": "In the Book of Exodus the lord hath sent down his word to the mighty Tim and he is ready to spead the good word to the failthul flock, in the form oldskool piano house bangers.",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1469.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "the-parish-church",
+    "artist": "Bongo Dave and The Nun DMC Collective",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1479.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "the-parish-church",
+    "artist": "Louis the Choir Boy",
+    "description": "",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1714.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "the-parish-church",
+    "artist": "Minister Dipp",
+    "description": "Straight from Liverpool's warehouses and clubs, DiPP is a tech house music DJ and producer. Weve dragged him out of the studio to get the Church jumping with his funky music style!",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist851.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "the-parish-church",
+    "artist": "Sinning with Sliced Tomatoes",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1095.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "the-parish-church",
+    "artist": "The Devine Davos",
+    "description": "",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1715.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "the-parish-church",
+    "artist": "The Funky Friars",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1481.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "the-parish-church",
+    "artist": "Tropical Jesus Jones",
+    "description": "",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1716.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "the-parish-church",
+    "artist": "Clumsy the Clergyman",
+    "description": "",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1725.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "the-parish-church",
+    "artist": "Divine Dobson",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1487.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "the-parish-church",
+    "artist": "Rejoice with Rockin' Ellie",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1724.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "the-parish-church",
+    "artist": "Sabbath Sermon",
+    "description": "Morning has broken, like the first morning, blackbird has spoken, like the first word! Ditch the hangover don your Sunday best and prepare to praise the lord, with the one and only Beat-Herder Parish Choir.",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1488.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "the-parish-church",
+    "artist": "Shut Up Shop Dave",
+    "description": "*",
+    "genre": "Garage",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1726.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "the-snug",
+    "artist": "Benny Strafford",
+    "description": "",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1746.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "the-snug",
+    "artist": "Dirtbox DJs",
+    "description": "Venturing forth from the caves of their spiritual homeland of Keighley, the dirty dozen are responsible for that bloody great thing in’t corner that makes your ears go funny and your dangly bits tremble (the soundsystem). Prepare to get out of your box and deep into the dirt.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist590.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "the-snug",
+    "artist": "Fusion Brothers",
+    "description": "",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1745.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "the-snug",
+    "artist": "Josh Parkinson",
+    "description": "",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1747.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "the-snug",
+    "artist": "Natalie George",
+    "description": "Nat is back with her uptempo vibe and banging tunes.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist940.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "the-snug",
+    "artist": "Ozzy Holt",
+    "description": "",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1744.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "the-snug",
+    "artist": "Richard Buck",
+    "description": "Producer and Sound Guru bringing an impeccable selection.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1424.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "the-snug",
+    "artist": "Rose Greenwood",
+    "description": "Rose is a singer and instrumentalist who has stepped behind the decks and dived seamlessly and headfirst into the North's stomping DJ scene. Mixing funky and classic house with breakbeat, she sets a bold and energetic vibe.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist941.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "the-snug",
+    "artist": "The Farmer",
+    "description": "Get in me wheelbarrer ya dirty cow! The inebriated seed-sower has come to plough his way through The Snug like a combine harvester set to ‘destroy’. He’s bloody sick of churning butter and squeezing udders so watch out you lot, it’s harvest time!",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist601.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "the-snug",
+    "artist": "Chris Holt",
+    "description": "Chris brings A Tropical Disco to town.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1754.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "the-snug",
+    "artist": "Deejay Random",
+    "description": "He's here , he's there , he's every fckn where and we love him for it . DMC mentalist bringing mayhem to The Snug and their freshly polished wheels of steel.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist588.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "the-snug",
+    "artist": "Flowers",
+    "description": "",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1752.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "the-snug",
+    "artist": "Fowler",
+    "description": "",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1751.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "the-snug",
+    "artist": "Kaz McQ",
+    "description": "",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1748.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "the-snug",
+    "artist": "Max Duffin",
+    "description": "",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1749.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "the-snug",
+    "artist": "Mini Da Minx",
+    "description": "Electro/ Bass House/ Breakbeat DJ with a deep passion for a dirty bassline, here’s a lady who is not scared to mix it up with all kinds of funky sh*t!",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1753.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "the-snug",
+    "artist": "Paul Verity",
+    "description": "Burnley boy Paul has been mixing for a good twenty years now and has been bouncing around the local scene DJing out and about and promoting nights as well as mixing just for the sheer pleasure of it. He's got everything from funky breaks to drum and bass and hip-hop. A veritable labour of love you're sure to appreciate.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist598.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "the-snug",
+    "artist": "Sanny",
+    "description": "",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1750.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "the-snug",
+    "artist": "Tim Hamblin",
+    "description": "After 30 successful years playing the posh one in Rentaghost Tim decided to give DJing a try. You can see how it's going here.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist565.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "the-snug",
+    "artist": "Dead Horse Gang",
+    "description": "Snug regular and great DJ.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1421.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "the-snug",
+    "artist": "Dee Brown",
+    "description": "From Shetland’s shores to Ibiza’s dancefloors, Dee brings decades of deck mastery and pure party energy. A Boombox Circus legend and Beat-Herder favorite, her sets blend house classics with fresh fire. Influenced by Derrick Carter and Honey Dijon, Dee’s vibe is timeless—expect grooves and guaranteed dancefloor magic.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1422.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "the-snug",
+    "artist": "Mr Todd",
+    "description": "Repping the Toon . Mr Todd is the big cheese behind The House Disciples movement rapidly gaining influence and respect all across the North East",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1423.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "the-snug",
+    "artist": "The Funk Philosopher",
+    "description": "The Socrates of the subwoofer – the Nietzsche of the tweeter – this enlightened soul can be found lost in thought behind the decks, contemplating the mysteries of the world to the stimulating sound of ghetto funk so filthy it’ll have your sweat glands going postal. High and low culture never got rammed together so tightly.",
+    "genre": "Drum & Bass",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist595.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Ramon Judah",
+    "description": "Ramon Judah comes from a musical tradition, his father Sugar was a star in Liverpool and was an early mentor to the Beatles.Settled in London and became host at the now legendary Dub Club. He has sung on many sounds over the years including Jah Youth, Channel One and more",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1733.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Impressa",
+    "description": "It's not a woman thing or a man thing, but a unification of the human race thing. Only through unity can people come together in acceptance and Love to create a better world. Impressa aka Sister Emma, part of the Bushy fam. Beatherder veteran, loaded with music from creation.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1741.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Mighty Oak",
+    "description": "Mighty Oak are soundman/builder/selector Ben, and producer/selector Jofis. They run their own record label and have played in session with a whos who of Sounds in the Reggae world. With a record box full of niceness, expect upliftment from the purest forces. Watch the Roots them grow.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1742.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Alexis",
+    "description": "Alexis is a solo vocalist collaborating with sound systems and producers in reggae, dub & dnb. Part of the Bushrocker Hi Fi family and known for frequently holding it down with the Impressa Sound crew too, get ready for the upliftment.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1737.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Dub Attack",
+    "description": "Formed in 2023, Dub Attack are a West Yorkshire based collective of long serving dub/roots producers, DJ’s and sound systems who have come together and collaborated to promote Dub music and all it's roots and branches, bringing people together to dance, socialise and reflect on the music…...",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1739.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Freedom Masses",
+    "description": "Freedom Masses Sound System, the Original Dub Advertiser, Manchester (UK)\r\nOver 41 active years in the sound business, spreading heavyweight roots, steppers and dub culture, across the UK and Europe. Freedom Masses are known for deep bass, conscious lyrics, and powerful sound, championing unity and upliftment.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1731.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "bushrocker-hi-fi",
+    "artist": "General TG",
+    "description": "Reggae selector & MC currently based in Manchester - with a passion for things Soundsystem. General TG is buzzing to bring his record collection to the Dub Centre Plus for some uplifting, deep and heavy vibes.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1734.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Jah Joel",
+    "description": "",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1729.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "bushrocker-hi-fi",
+    "artist": "JoJo",
+    "description": "JoJo is part of the Bushrocker Hi Fi family/One Love Lancaster crew, hes been working his way up through the sound, from lifting boxes to now DJing on a regular basis. Expect up front UK Dub/Steppers and high energy from this ever raising youth man talent,",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1439.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Kez Dubs",
+    "description": "Kez Dubs is a female DJ hailing from Colne, specialising in Reggae, Dub & Roots music.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1449.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1700",
+    "end": "1800",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Lioness Power",
+    "description": "A female duo on a heartfelt mission to spread love, peace, and equality through the unifying power of Dub and Reggae music. Known for selecting tunes with uplifting lyrics, complemented by ethereal flutes, melodic horns and deep, resonant basslines.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1732.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1600",
+    "end": "1700",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Matty Banton",
+    "description": "Long time Bushrocker Hi Fi family member Matty is a familiar face in the Dub Centre Plus, expect up front modern Roots & Dub and much more from his record box. This youth came to rock the nations",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1445.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1500",
+    "end": "1600",
+    "venue": "bushrocker-hi-fi",
+    "artist": "North Fire",
+    "description": "North Fire Sound\r\nSound System collective based in the North rocking all styles and fashions. Have worked with a whose who in the festival & Reggae scene, high energy from start to finish.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1735.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1400",
+    "end": "1500",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Spider",
+    "description": "Spider the man from Jamdown, sent with a message from creation to warn all the nations to settle down and just be cool. A veteran soundman, Spider will be playing from his collection of records from nowadays to way back when for two hours Come vibes with the Spider Man. Expect reggae music from across the ages to make you rock and groove with all eight feet...",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1177.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1300",
+    "end": "1400",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Your Highness",
+    "description": "Your Highness- Reggae music enthusiast, Selector, promoter and driving force of Underground Sound System for 8 years. Humble Rasta Sista.Traveler, kickboxer and a person who loves people and hiking in the mountains.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1441.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "bushrocker-hi-fi",
+    "artist": "T-Meds",
+    "description": "T-Meds - Bushrocker family member with an extensive record collection to rock the nations, one not to be missed !!!",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1728.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Professor P",
+    "description": "Jungle Studio is home, and laboratory of Professor P; Dub Scientist and operator of Freedom Masses Sound. Giving a platform to local artists and creating heavyweight dubs that cross boundaries. Hes also part of the Bushrocker Family and has rebuilt the sound over the years and has been passing on his knowledge of Dub/Sound onto the crew. ONE NOT TO MISS.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist527.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Dr Valvatron (Axis)",
+    "description": "Dr Valvatron aka Paul Axis, with over 40 years in the Soundsystem business he has been playing, promoting, and touring with his authentic sound systems for many years, and has gained an international following in the process. Legendary status, expect only the finest of sounds to make you move.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1740.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Dub Smugglers",
+    "description": "North West reggae enthusiasts Dub Smugglers are no strangers to creating\r\nunforgettable vibes. Dub Smugglers are preparing\r\nfor a long stay at the forefront of Manchester's ever popular reggae scene. The crew have played across the UK and Europe and Asia setting dance floors alight\r\nwherever they go.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1727.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "bushrocker-hi-fi",
+    "artist": "High Lassie",
+    "description": "A member of the Reaction Sound System, curating lineups and managing their stages at various festivals/events. She originally got into reggae at the age of 18 through an ex's dad who had an amazing record collection and used to play in Brixton when he was a youth. Around the same time she also got into sound system through free parties and sessions in Exeter where she grew up. From 2009-13 she regularly attended subdub but didn't get properly introduced to smaller sessions in Leeds until around 2013. By 2014/15 she started DJing herself as a fully paid up member of the crew and hasn't looked back since!",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1442.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Ironfarmer",
+    "description": "",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1738.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Kuntri Ranks",
+    "description": "Kuntri Ranks, vocalist of Dub Smugglers and former member of veteran soundsystem Jah Guide. Ranks has been a voice of Manchester since the early 80s. He will be nicing up the Dub Centre Plus throughout the weekend, tune in Ranks is in the area.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1447.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Union Sound",
+    "description": "Union Sound is a collective of like-minded, enthusiastic, musically-driven individuals, with a lot of passion and care for what we do and hope to achieve. This year Aslan & Killamanjaro are playing b2b on Friday evening, what a way to start your Beat Herder journey",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1743.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "bushrocker-hi-fi",
+    "artist": "Ring The Alarm",
+    "description": "Ring the Alarm Collective : Northwest Soundsystem / Club Night / Record Label- they have worked with/released music by the likes of Daddy Freddy, Parly B, Tom Spirals, Top Cat to name a few. Expect original material, guest singers/mcs and whole heap of niceness, Ring the Alarm have been nicing up the area since 2011. Expect an uplifting mix of digital rubadub and dancehall classics thrown in with their signature stack of dubplates and original production.",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1174.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "bushrocker-hi-fi",
+    "artist": "UK Ponics",
+    "description": "UK Ponics are a heavyweight roots dub sound system professionally built by main man Zam. This set wont be for the faint hearted !!!",
+    "genre": "Dub",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1736.jpg"
+  },
+  {
+    "day": "Thursday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "smoky-tentacles",
+    "artist": "Amy True",
+    "description": "Amy True has been described as “one of the most influential and talked aboutpersonalities in the Hip Hop, Soul, and Jazz scene,” delivering a fusion of progressive sounds alongside a steady stream of rebellious socio-political rapand soulful melodic song since the late 2000s.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1685.jpg"
+  },
+  {
+    "day": "Thursday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "smoky-tentacles",
+    "artist": "Beat Cleaver",
+    "description": "Multi-dimensionalist instrumentation - Loop station mutation - Improvised beats, rhymes and melodies chanelled through an expert shape shifter from another galaxy.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1690.jpg"
+  },
+  {
+    "day": "Thursday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "smoky-tentacles",
+    "artist": "Brockout",
+    "description": "Long serving free party turntablist Dj BrOckOut will be diggin’ the crates to take you on a journey with a heavy selection of Hip hop, Reggae and Ragga, past and present. Will be sure to warm the coils if not melt them… Brock out!!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1691.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "smoky-tentacles",
+    "artist": "Chris Tofu",
+    "description": "Established in 1995 DJ Chris Tofu has become a pioneer of Vintage Remix and the UK Festival scene, sharing his obsession with all things remixed and raucous with jumping crowds across the globe! From Glastonbury to Istanbul this musical maverick is constantly exploring, discovering and creating new sounds and new experiences, mixing up the formula for good vibe pie!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1609.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "smoky-tentacles",
+    "artist": "Omega Nebula",
+    "description": "Electronic future-dub duo OMEGA NEBULA are a force. Their music takes the most powerful elements of dub reggae and dubstep and rolls them into uplifting, emotionally weighted anthems with a unique sonic identity.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1563.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "smoky-tentacles",
+    "artist": "Digital Foundation ft Parly B",
+    "description": "Long term friends of the Smoky Tentacles: Six piece digital dubwise & dancehall specialists Digital Foundation return for a 20th anniversary Beatherder hoedown featuring the renowned MC Parly B.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1836.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "smoky-tentacles",
+    "artist": "Ember & Sentient Sounds",
+    "description": "Ember and Sentient Sound are a vibrant band born from the fertile music scene of Bristol. Lead by Ember, a soulful and rhythmical songstress with a deep message to spread. Bringing delectable basslines alongside an afrobeat and hip-hop inspired rhythm section wth beautiful melodies and and guitar licks that will hit the spot. Not one to miss if you want to get sassy and shake a tail feather!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1814.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "smoky-tentacles",
+    "artist": "Fandjango",
+    "description": "This Lancashire/Yorkshire 5 piece hail from a stones throw away from Beatherdershire and always bring the place down with their combination of gypsy flavours and jazz swing. It wouldn't be Beatherder without them...! Come and get Dirrty as they shake and stir a tropical gypsy lounge cocktail into everything from Christina Alguilera to jungle book anthems!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1813.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "smoky-tentacles",
+    "artist": "Feline & Maetrix",
+    "description": "Bristol bassline power couple Feline & Maetrix bring the best beats from the underground to get the party poppin!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist836.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "smoky-tentacles",
+    "artist": "Native Cult",
+    "description": "The Native Cult are an outfit that pride themselves on creating sunny vibes through their folk music. Congas and bongos, jazz chords, flamenco guitar styles, catchy bass lines, harmonies, solid drums beats and memorable choruses that get into your head. Their infectious energy inspires and uplifts audiences and sends them on their journey feeling elevated.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1809.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "smoky-tentacles",
+    "artist": "Phil Cudworth",
+    "description": "Modern-day troubadour, Phil Cudworth, writes and performs original songs about life, love, passion, politics, fear, joy and anything else that finds its way into his cluttered brain. He sings with humour, a positive outlook and the sense that none of this stuff matters all that much at all really.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1811.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "smoky-tentacles",
+    "artist": "Rose Greenwood",
+    "description": "Multi-instrumentalist singer-songwriter and live looping artist. Rose, an eminent figure in the UK's underground grass roots music scene, has played countless festivals and a myriad of cult venues across the UK. Her acclaimed sound has gained fans and radio play from the BBC to Canada, Australia and the USA.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1512.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "smoky-tentacles",
+    "artist": "Stacey Cohen",
+    "description": "Stacey Cohen is a genre defying music artist & producer from the UK. Her unique & playful sound blends soulful, ethereal, poetic vocals with lush soundscapes, intricate melodies & killer drums & bass. Her live performances are characterised by their hypnotic energy.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1810.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1700",
+    "end": "1800",
+    "venue": "smoky-tentacles",
+    "artist": "DJ Daydream",
+    "description": "Preston based DJ Daydream, spins the best beats from Reggae and Soul though to Wu-Tang. Smoke a shisha and let her lift your mind to a hypnotic realm!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1182.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1600",
+    "end": "1700",
+    "venue": "smoky-tentacles",
+    "artist": "Tentacled Resident DJs",
+    "description": "Smoky Tentacle's residents get the party started with a mashup of everything from reggae to hiphop, funk and breakbeats.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1839.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1500",
+    "end": "1600",
+    "venue": "smoky-tentacles",
+    "artist": "Texel",
+    "description": "Texel fits the festival profile perfectly. This Devon born sheep farmer, multi-instrumentalist and herder of beats, brings an eclectic global influenced set (and he'll pull you out of the mud after the festival with his new hilux for £50.)",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1840.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1400",
+    "end": "1500",
+    "venue": "smoky-tentacles",
+    "artist": "Tomas Por Culo",
+    "description": "",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1815.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "smoky-tentacles",
+    "artist": "Plump DJs",
+    "description": "The Plump DJs are internationally renowned DJ/Producer duo Andy Gardner and Lee Rous of London. Their unmistakable sound has won them remixes from the likes of Deadmou5, Mark Ronson, Moby and Orbital, whilst their four deck live show has led to countle..",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1592.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "smoky-tentacles",
+    "artist": "Stanton Warriors",
+    "description": "These two Bristol boys first charged, stormed and straight-up invaded the scene back in 2001 with a highly acclaimed debut compilation 'The Stanton Sessions' and since then have continued to dominate and pillage every dance floor and pair of headphones.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1593.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "smoky-tentacles",
+    "artist": "Bin Bag Wisdom",
+    "description": "With a decade of touring behind them, this is a return to the roots of what make Binbag Wisdom great: Two best friends, sharing their infectious humour through deft lyricism on hard hitting beats. After a brief hiatus to work on solo projects and colloborations with Dr. Syntax and K.O.G, and their 4th studio release on the way soon, the boys are very much ‘back in town’ as it were.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1608.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "smoky-tentacles",
+    "artist": "Captain Avery & The Cosmic Triceratops",
+    "description": "Captain Avery & the Cosmic Triceratops of Intergalactic Peace (to give their full name) describe themselves as celestial apes in a sun-drenched space fugue! They play cosmic afrobeat / psychedelic hilife / intergalactic shanties / tropical punk / world-gaze / party skronk. Come and get some!! Expect: WILD DANCING! COLLECTIVE SINGING! SPACE CHANTS! GLITTERED LOVE!! SEQUINED DEBAUCHERY!!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1819.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "smoky-tentacles",
+    "artist": "Favilla",
+    "description": "Favilla has ingrained herself through out the vibrant music scenes of Cambridge, Nottingham and Bristol, playing a mixture of lo-fi hip hop, Afrobeat inspired rhythms and genres from across the world. Unifying different instruments, vocalists, languages and cultures to bring a fresh new sound and to take you down a musical journey of the heart.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1241.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "smoky-tentacles",
+    "artist": "Interdimension",
+    "description": "Immersive handpan and synth - electronic project. Ease yourself  into Saturday with their sublime sounds.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1816.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "smoky-tentacles",
+    "artist": "James Lyons",
+    "description": "The ultimate one man band! Looper, beatboxer, flute player extraordinaire, harmonica soloist and freestyle rapper James Lyons always brings the place down with his off the cuff creations and witty, hallucinogenic wordplay. One not to be missed!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1812.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "smoky-tentacles",
+    "artist": "John Dawes",
+    "description": "The music is derived from dedicated years of music evolution derived from graft, heart and relentless passion. Dawes is a talented guitarist/percussionist, with the back beat of the stomping kick drum and a horizontal-style of guitar tapping as well as the ability to pull an audience in with deep felt vocals.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1523.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "smoky-tentacles",
+    "artist": "Kibitz",
+    "description": "Kibitz perform original music rooted in the soulful melodies of Klezmer and pulsating rhythms of balkan music. Yee good people shalt dance whilst the rum chai flows and the phat clarinet shall soar into the cosmos like a giant lacquered arrow, or something...",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1820.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "smoky-tentacles",
+    "artist": "Mother Sugar",
+    "description": "Mother Sugar's sound is a fusion of jazz and neo-soul. Lush vocals from poet and lyricist Rehana address social struggles, accompanied by her accompished four piece band.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1818.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1700",
+    "end": "1800",
+    "venue": "smoky-tentacles",
+    "artist": "Terry Logan",
+    "description": "Terri Logans music is a message of love and oneness. Her voice is at the forefront, exhibiting warmth that is both tender and fragile, her soul of this musician her collaborators is allowed to shine through and is a testament to the love, personality and depth that has been poured into her sound.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1817.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1600",
+    "end": "1700",
+    "venue": "smoky-tentacles",
+    "artist": "Uncle Barry's Disco",
+    "description": "Six-piece improv juggernaut fusing heavy grooves, freestyle rap and crowd-fuelled energy into a genre-blurring live experience. A tightrope walk between wild invention and razor-sharp musical chops. No two sets the same, but each one feels like a shared hallucination. You’ll laugh, sweat, and leave wondering if you just joined a cult.Bring your limbs. Lose your mind. This isn’t a gig—it’s precision chaos, wrapped in rhythm, and delivered with a wink.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1689.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1500",
+    "end": "1600",
+    "venue": "smoky-tentacles",
+    "artist": "Brand New Bag",
+    "description": "Brand New Bag are a brand new band from Leeds featuring some\r\nof the city's funkiest faces. BNB formed in 2023 for an on-going residency at\r\nLeeds' hottest late night spot for all things jazz, funk & soul, The Domino\r\nClub. Born from a collective of musicians and rappers that coalesced around the\r\nFunk'd Up Jazz-Hop live jam sessions that popped up around the city since 2015,\r\nBNB bring funky and soulful dancefloor flavours to jazz clubs, warehouse raves\r\n& festivals, and parties of all kinds, all pumped with a beating heart of\r\nUK Hip-Hop.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1529.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1400",
+    "end": "1500",
+    "venue": "smoky-tentacles",
+    "artist": "Mr Fitz",
+    "description": "Expect a block rocking set from Mr Fitz: Mixing, chopping and cutting up hip-hop, funk, and swing alongside bassy breaks and D n' B!\r\nThis top notch party DJ and former UK DMC finalist has held down numerous residencies at bars and clubs in Bristol and regularly smashes it out the park!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1821.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "smoky-tentacles",
+    "artist": "Dub Princess & Hotsteppas",
+    "description": "Hotsteppas live shows always deliver high energy immersive performances blending Reggae, Ska, & Afrobeat. After a sell-out tour of New Zealand and highly rated EP release with Isaac Chambers, Dub Princess returns to the UK to tour new work with the band, injecting even more flavour into an incredible show!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1834.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "smoky-tentacles",
+    "artist": "Dur Brain",
+    "description": "One half of Binbag Wisdom, this Bristol rapper brings intricate flows and chunky beats. Expect an intimate show as he samples, beats and ryhmes live in his finest smoking jacket, whilst reclining in his leather armchair on stage.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1822.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "smoky-tentacles",
+    "artist": "Flat Moon",
+    "description": "Neuro-umami punk-funk //pan-fried psych-junk//these are the groovy bastards that steal your socks at night. This funk is RAW... get ready to get funked!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1825.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "smoky-tentacles",
+    "artist": "Masi Masi",
+    "description": "A star in ascendancy. Catch him now... lush heartfelt vocals and melodies that will blow you away and get caught in you mind for the rest of the day.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1823.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "smoky-tentacles",
+    "artist": "Pat Fulgoni Blues Experience",
+    "description": "A funktastic blues band fronted by a singer who has sung singles for the likes of Camo & Krooked, Murdock, Technimatic, Zion Train, London Elektricity, Coldcut …. countless of dance stars on labels like Hospital, Ram, Rampage, Shogun. The list is large. DJ Mag says “deliriously flowing soul” Billboard Mag says “Fulgoni could sing a pearl from its oyster”. They ain’t wrong. The debut Pat Fulgoni Blues Experience album has received considerable acclaim and a no 3 in the UK blues airplay charts. Already with European dates under their belts \"Blues in Britain\" writes its a blues set to cherish... Pat and co just do them so well” Reviewing 2024’s Tenby Blues Festival Blues Matters Mag said: “There then followed an entirely different style and set of full throttle funky electric blues led by Pat Fulgoni and his Blues Experience. With a full on five piece band Fulgoni’s powerful vocal delivery worked wonders as he pushed the boat out with a confidence that highlighted this band’s importance in the growing blues world in the UK.”",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1826.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "smoky-tentacles",
+    "artist": "Steel Foxes",
+    "description": "An eight Piece fellowship, from the Lake District. Dub/Funk/Electronic fusion, forged in fire. They're quickly earning a reputation for electrifying live performances and are set to ignite your tentacles.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1824.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "smoky-tentacles",
+    "artist": "Chris Holt",
+    "description": "Four Corners and Tropical Disco Radio shows hosted by Chris Holt, collector, DJ and self proclaimed Vinyl Junkie. Join him on a Sunday trip around the four Corners of the world as we float through space on the back of a giant turtle.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1181.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "smoky-tentacles",
+    "artist": "Joe Sonar b2b Rose Holland",
+    "description": "UK bass with a global vibe. Producer and DJ, Joe Sonar is a new project fresh out of Bristol town from acclaimed underground producer KREED (responsible for production on most of Gardna's bangers!) Here he plays b2b with his partner in crime Rose Holland. Bubbling basslines with broken beats and a UK garage twist. Don't miss!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1827.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "smoky-tentacles",
+    "artist": "Lagan Purdy (Spoken Word)",
+    "description": "Words spoken.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1837.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "smoky-tentacles",
+    "artist": "Paul Sees (Spoken Word)",
+    "description": "Spoken words",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1838.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "working-mens-club",
+    "artist": "Black Lace",
+    "description": "Get ready to push pineapples and shake the tree - the legendary Black Lace are making their triumphant return to the Working Men’s at Beat-Herder 2025!  Whether you're a die-hard fan or just here for the Agadoo, this is your chance to reLive the magic and dance like it's 1984.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1686.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "working-mens-club",
+    "artist": "CLEMENTYNE",
+    "description": "CLEMENTYNE: Five friends, one band, and zero fear of synths. Born in 2024, they blend indie angst with ambient vibes—think Radiohead meets Moby at a guitar shop. It’s moody, melodic, and mildly existential.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1777.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "working-mens-club",
+    "artist": "Eddie Earthquake and The Tremors",
+    "description": "Get ready to shake, rattle and rock’n’roll as these teddy boys spurt hot jets of Brylcreem all over the Working Men’s. Rock’n’roll and pop hits and obscurities from the 1950’s and 60’s that’ll make you twist and shout til the tent starts to cave in!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1264.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "working-mens-club",
+    "artist": "Lauren Jean",
+    "description": "From BBC Introducing stages to supporting Aurora at the Albert Hall, Lauren’s been quietly making big waves. With lyrics that hit home and melodies that stick, she’s bringing heartfelt bangers and northern charm to the fields of Beat-Herder.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1774.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "working-mens-club",
+    "artist": "Molly Tilston and The Paper Hearts",
+    "description": "A heaven kissed voice, original songs to die for and exquisitely chosen tunes to captivate with their beauty. Her folk family pedigree undeniably shining through, she is a superstar in her own right, and will melt the coldest of hearts with her performances full of power and emotion.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1775.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "working-mens-club",
+    "artist": "Reight Twang",
+    "description": "Yorkshire Power Pop at its finest! With jangly guitars, catchy hooks, and a northern soul that won’t quit, this band blends classic pop sensibilities with a raw, energetic edge. Born in the heart of Yorkshire, they’re loud, proud, and ready to twang your socks off!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1776.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "working-mens-club",
+    "artist": "Andy Capp",
+    "description": "I’d love to know what he’s got hidden under that bloody cap. Monsieur Cap’s hour of power will get you mangled, spangled and Mr Bojangled! Hats off to you, sir!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1780.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "working-mens-club",
+    "artist": "Boogie Oogie Wonderland",
+    "description": "Hailing from Dumfries Scotland Boogie Oogie Wonderland aka Mr Smooth Grooves brings his Funky/Tropical/Disco/Soulful vibes all re-edited and blended to bring the ultimate in Groovy Goodness a must see.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1781.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "working-mens-club",
+    "artist": "Captain Bendy's Dead Men Disco",
+    "description": "Captain Bendy (@robmulholland, @deadmentalkingpod) takes the wheel! Nothing but singalong bangers from pop punk to indie to disco. Get your hands in the air and your arse on the dancefloor, Captain's orders. No dickheads allowed.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1779.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "working-mens-club",
+    "artist": "Groovers in the Heart",
+    "description": "Wanna get up, get down, get groovy? Then this is your dancefloor destiny. We’re talking basslines that bounce and rhythms that refuse to let you stand still. Whether you're strutting like it's Studio 54 or  vibing with your crew, this set is pure glitter-fuelled joy so bring your best moves.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1778.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1700",
+    "end": "1800",
+    "venue": "working-mens-club",
+    "artist": "Martyn Illingworth",
+    "description": "With 30 years behind the decks and zero tolerance for boring tunes, he’ll play anything—as long as it’s got that funky, housey, disco-y goodness with the kind of basslies that make your knees do things they haven’t done since 2003.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1782.jpg"
+  },
+  {
+    "day": "Friday",
+    "start": "1600",
+    "end": "1700",
+    "venue": "working-mens-club",
+    "artist": "Nana Moon",
+    "description": "The Queen’s not dead, she’s here! Presenting true BH&DWMC royalty: the one and only Nana Moon, Queen of the Club, fresh from the front room and ready to reign once more! Joining her on the royal rave throne is her daughter Sarah. Double the fabulousness, double the mischief!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist281.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "working-mens-club",
+    "artist": "Tragedy",
+    "description": "Tragedy takes disco, soft-rock and pop classics, and completely reimagines them as glorious, red-hot heavy metal. They’re sure to get your head bangin’, your booty shakin’ – and put a smile on your face and your fist in the air.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1634.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "working-mens-club",
+    "artist": "Beat-Herder's Got Talent",
+    "description": "Beat-Herder’s got talent, apparently. Must be bloody well hidden! This prestigious contest draws in punters from miles around for the express purpose of ferreting out what scraps of talent may be lying dormant in any of you lovely lot so if you’re feeling brave, get yourself to BH&DWMSC!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist287.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "working-mens-club",
+    "artist": "Lucy Robinson",
+    "description": "She came, she sang, she absolutely smashed it! Crowned queen of BHGT, Lucy wowed the crowd and judges alike with her powerhouse vocals and unstoppable energy. A rising star with serious sparkle—don’t miss your chance to see what all the fuss is about!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1784.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "working-mens-club",
+    "artist": "Mysti Valentine's F***ing Bingo",
+    "description": "She’s a flâneuse, a chanteuse, and a whole lot of fabulous—some things just sound better in French. Mysti Valentine returns with her signature sass to host the most outrageous game in town: Mysti Valentine’s F*ing Bingo! Expect glitter, giggles, and glorious chaos. Get yer dabbers out and prepare to misbehave!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1783.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "working-mens-club",
+    "artist": "Obi Joe presents The BH&DWMSC Quiz",
+    "description": "Join us for the legendary Obi Joe's Quiz, where wit meets weirdness and trivia tangles with total nonsense. Back for another round of head-scratching hilarity, this isn’t your average pub quiz. It’s part brainteaser, part caberet and 100% Beat-Herder. Expect baffling questions and top prizes.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist286.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "working-mens-club",
+    "artist": "Purple Turtle",
+    "description": "Hot off their tenth stint in rehab for alcohol, drug, sex and cucumber addiction, PURPLE TURTLE return to Beat Herder for a night of 80's hair metal and pop bangers. Prepare yourselves to be jealous of their talent, sex appeal, and their collectively frightening bulge. Prepare yourselves to be amazed",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1788.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "working-mens-club",
+    "artist": "Swingers Club",
+    "description": "In the finest Working Mens Club tradition we bring you the Swingers' Club Disco, hosted by veteran swingers Mad Uncle Harry and Dudley Duoflush.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1274.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "working-mens-club",
+    "artist": "The Rocky Horror Picture Show 50th Year Extravaganza",
+    "description": "Time warp back to where it all began—this is your official invitation to don those fishnets, lace up those corsets, and let your freak flag fly! Expect outrageous outfits, iconic tunes, and a whole lot of pelvic thrusting. Get yer fishnets on—it’s gonna be a wild one!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1787.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1900",
+    "end": "2000",
+    "venue": "working-mens-club",
+    "artist": "Dee Brown",
+    "description": "From Shetland’s shores to Ibiza’s dancefloors, Dee brings decades of deck mastery and pure party energy. A Boombox Circus legend and Beat-Herder favorite, her sets blend house classics with fresh fire. Influenced by Derrick Carter and Honey Dijon, Dee’s vibe is timeless—expect grooves and guaranteed dancefloor magic.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1785.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1800",
+    "end": "1900",
+    "venue": "working-mens-club",
+    "artist": "Kaz McQ",
+    "description": "The unstoppable Miss McQ is back to sprinkle her magic across Beat-Herder once again! She’ll be commanding the main stage with her signature sass, spinning musical gold between bands, and lighting up the Working Men’s Club with a performance you won’t forget. We adore her—and trust us, you will too!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1789.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1700",
+    "end": "1800",
+    "venue": "working-mens-club",
+    "artist": "Mark Howarth",
+    "description": "Mark hit the house scene in the '90s like a glitter cannon at a rave - DJ, producer and groove wizard with over 150 remixes. Nowadays, he’s teamed up with his wife Andrea to form Basement Nights. Together, they serve up funk, disco, and enough sparkle to blind a mirrorball.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1790.jpg"
+  },
+  {
+    "day": "Saturday",
+    "start": "1600",
+    "end": "1700",
+    "venue": "working-mens-club",
+    "artist": "Sliced Tomatoes",
+    "description": "Sliced Tomatoes take you on a juicy journey through the ages: from 50s jazz-soul to 60s freakbeat, 70s boogie to 80s Mancunian punk… polished off with some some wonky deep house and nu disco flavours from today.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1786.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0300",
+    "end": "0400",
+    "venue": "working-mens-club",
+    "artist": "Adored",
+    "description": "*",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1687.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0200",
+    "end": "0300",
+    "venue": "working-mens-club",
+    "artist": "Comedy",
+    "description": "Roll up, roll up to the BH&DWMSC – that’s the Beat-Herder & District Working Men’s Social Club (try saying that after six pints). From 2 to 5 PM, this retro riot serves up comedy so sharp it could slice your wellies.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1793.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0100",
+    "end": "0200",
+    "venue": "working-mens-club",
+    "artist": "Not a Band",
+    "description": "LADIES AND GENTLEMEN.",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1688.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "0000",
+    "end": "0100",
+    "venue": "working-mens-club",
+    "artist": "Reefer Franklin",
+    "description": "Born in the steamy backwaters of the Brun Delta... REEFER FRANKLIN deLivers passionate and gripping acoustic blues renditions of your favourite Aretha classics! Get down and hear the Queen of Soul sung by the King of Colne...",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1791.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2300",
+    "end": "0000",
+    "venue": "working-mens-club",
+    "artist": "Grumpy Grandad",
+    "description": "Get thissen to’t’barber, lad! Tha looks like a right scruff. Bloody youth—glitter in beards and no clue about graft! Come dahn t’Working Men’s, I’ll show thee what real work looks like. And no, I said workin’, not twerkin’!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1267.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2200",
+    "end": "2300",
+    "venue": "working-mens-club",
+    "artist": "M1 Dukebox",
+    "description": "Is it a bird? Is it a beanbag? Hell no, it’s the Michelin-Starred Marauder himself. Mitch is as Mitch does, so pull your finger out and prepare to feel the funk in a way you’ve never felt it before. Ow!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1269.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2100",
+    "end": "2200",
+    "venue": "working-mens-club",
+    "artist": "Phoebe Willow",
+    "description": "Make some noise for Phoebe Willow – born backstage, raised on absolute bangers! Daughter of the iconic Nana Moon and Grumpy Grandad, she’s been vibing with us since day one. Next-gen soul, same legendary rhythm!",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1795.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "2000",
+    "end": "2100",
+    "venue": "working-mens-club",
+    "artist": "Steve Blackburn",
+    "description": "Spinning soul, funk, and disco so smooth it should come with a chiropractor. He’s the unholy lovechild of a glitterball and a groove gremlin, dropping beats so funky they’ve been banned in five time zones. Warning: side effects may include uncontrollable dancing",
+    "genre": "House",
+    "image": "https://beatherder.co.uk/assets/thumbs/artist1792.jpg"
+  },
+  {
     "day": "Thursday",
     "start": "0300",
     "end": "0400",
