@@ -4,8 +4,9 @@ import { logoMap, photoMap } from '@/constants/StageImages';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { getCollapsedDaysForToday } from '@/lib/utils';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
 import { Stack, useLocalSearchParams } from 'expo-router';
-import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Image,
   LayoutAnimation,
@@ -62,19 +63,31 @@ export default function StageDetail() {
     };
   });
 
-  useEffect(() => {
-    AsyncStorage.getItem('stages').then((json) => {
-      if (json) {
-        setStages(JSON.parse(json));
-      }
-    });
-    AsyncStorage.getItem('lineup').then((json) => {
-      if (json) {
-        setLineup(JSON.parse(json));
-      }
-      setLoading(false);
-    });
-  }, []);
+  useFocusEffect(
+    React.useCallback(() => {
+      let isActive = true;
+
+      const load = async () => {
+        const [s, l] = await Promise.all([
+          AsyncStorage.getItem('stages'),
+          AsyncStorage.getItem('lineup'),
+        ]);
+
+        if (!isActive) return;
+
+        setStages(s ? JSON.parse(s) : []);
+        setLineup(l ? JSON.parse(l) : []);
+        setLoading(false);
+      };
+
+      load();
+
+      return () => {
+        isActive = false;
+      };
+    }, [])
+  );
+
 
   const stage = stages.find((s) => s.slug === slug);
   const stagePerformances = lineup.filter((e) => e.venue === slug);

@@ -1,10 +1,12 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
+import { useCallback, useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
 import NoPerformanceCard from '@/components/NoPerformanceCard';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import PerformanceCard from '@/components/PerformanceCard';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
 // Convert a performance's day and time into a JavaScript Date
 function parsePerformanceDate(day: string, time: string): Date {
@@ -36,18 +38,22 @@ export default function NowNextScreen() {
   const [lineup, setLineup] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const load = async () => {
-      const [s, l] = await Promise.all([
-        AsyncStorage.getItem('stages'),
-        AsyncStorage.getItem('lineup'),
-      ]);
-      setStages(s ? JSON.parse(s) : []);
-      setLineup(l ? JSON.parse(l) : []);
-      setLoading(false);
-    };
-    load();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      const load = async () => {
+        setLoading(true);
+        const [s, l] = await Promise.all([
+          AsyncStorage.getItem('stages'),
+          AsyncStorage.getItem('lineup'),
+        ]);
+        setStages(s ? JSON.parse(s) : []);
+        setLineup(l ? JSON.parse(l) : []);
+        setLoading(false);
+      };
+
+      load();
+    }, [])
+  );
 
   const now = new Date();
 
@@ -79,7 +85,6 @@ export default function NowNextScreen() {
         />
       }
     >
-
       {loading ? (
         <Text style={styles.loading}>Loading...</Text>
       ) : (
@@ -89,9 +94,10 @@ export default function NowNextScreen() {
           return (
             <View key={stage.slug} style={styles.stageBlock}>
               <Text style={styles.stageTitle}>{stage.name}</Text>
+
               {current ? (
                 <PerformanceCard
-                  key={`${current.day}-${current.venue}-${current.start}-${current.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+                  key={`now-${current.day}-${current.venue}-${current.start}-${current.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
                   uid={`${current.day}-${current.venue}-${current.start}-${current.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
                   day={current.day}
                   start={current.start}
@@ -99,16 +105,18 @@ export default function NowNextScreen() {
                   artist={current.artist}
                   genre={current.genre}
                   description={current.description}
+                  venue={current.venue}
                 />
               ) : (
                 <NoPerformanceCard
-                  key={`venue-closed-${Math.random().toString(36).substr(2, 9)}`}
-                  description='Now - Venue closed'
+                  key={`now-closed-${stage.slug}`}
+                  description='Now – Venue closed'
                 />
               )}
+
               {next ? (
                 <PerformanceCard
-                  key={`${next.day}-${next.venue}-${next.start}-${next.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+                  key={`next-${next.day}-${next.venue}-${next.start}-${next.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
                   uid={`${next.day}-${next.venue}-${next.start}-${next.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
                   day={next.day}
                   start={next.start}
@@ -116,11 +124,12 @@ export default function NowNextScreen() {
                   artist={next.artist}
                   genre={next.genre}
                   description={next.description}
+                  venue={next.venue}
                 />
               ) : (
                 <NoPerformanceCard
-                  key={`venue-closed-${Math.random().toString(36).substr(2, 9)}`}
-                  description='Next - Venue closed'
+                  key={`next-closed-${stage.slug}`}
+                  description='Next – Venue closed'
                 />
               )}
             </View>
@@ -162,16 +171,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 4,
-    color: '#E30083'
-  },
-  now: {
-    color: 'green',
-  },
-  next: {
-    color: 'blue',
-  },
-  closed: {
-    color: 'gray',
-    fontStyle: 'italic',
+    color: '#E30083',
   },
 });
