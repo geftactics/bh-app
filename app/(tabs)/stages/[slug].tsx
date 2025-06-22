@@ -1,12 +1,48 @@
-// app/stages/[slug].tsx
 import PerformanceCard from '@/components/PerformanceCard';
 import { Colors } from '@/constants/Colors';
 import { logoMap, photoMap } from '@/constants/StageImages';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { getCollapsedDaysForToday } from '@/lib/utils';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import {
+  Image,
+  LayoutAnimation,
+  Platform,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  UIManager,
+  View,
+} from 'react-native';
+
+if (Platform.OS === 'android') {
+  UIManager.setLayoutAnimationEnabledExperimental?.(true);
+}
+
+const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+function isPast(day: string): boolean {
+  const now = new Date();
+  const dayMap: any = {
+    Thursday: 4,
+    Friday: 5,
+    Saturday: 6,
+    Sunday: 0,
+  };
+  return now.getDay() > dayMap[day] || (now.getDay() === dayMap[day] && now.getHours() >= 5);
+}
+
+function timeSort(a: any, b: any) {
+  const parse = (t: string) => {
+    const h = parseInt(t.slice(0, 2), 10);
+    const m = parseInt(t.slice(2), 10);
+    return h < 5 ? h + 24 + m / 60 : h + m / 60;
+  };
+  return parse(a.start) - parse(b.start);
+}
 
 export default function StageDetail() {
   const colorScheme = useColorScheme();
@@ -16,17 +52,22 @@ export default function StageDetail() {
   const [stages, setStages] = useState<any[]>([]);
   const [lineup, setLineup] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [collapsed, setCollapsed] = useState<Record<string, boolean>>(() => {
+    const defaultCollapsedDays = getCollapsedDaysForToday();
+    return {
+      Thursday: defaultCollapsedDays.includes('Thursday'),
+      Friday: defaultCollapsedDays.includes('Friday'),
+      Saturday: defaultCollapsedDays.includes('Saturday'),
+      Sunday: defaultCollapsedDays.includes('Sunday'),
+    };
+  });
 
   useEffect(() => {
     AsyncStorage.getItem('stages').then((json) => {
       if (json) {
         setStages(JSON.parse(json));
       }
-      setLoading(false);
     });
-  }, []);
-
-  useEffect(() => {
     AsyncStorage.getItem('lineup').then((json) => {
       if (json) {
         setLineup(JSON.parse(json));
@@ -36,7 +77,19 @@ export default function StageDetail() {
   }, []);
 
   const stage = stages.find((s) => s.slug === slug);
-  const stagePerformances = lineup.filter((e) => e.venue === slug); 
+  const stagePerformances = lineup.filter((e) => e.venue === slug);
+
+  const performancesByDay: Record<string, any[]> = {};
+  dayOrder.forEach((day) => {
+    performancesByDay[day] = stagePerformances
+      .filter((p) => p.day === day)
+      .sort(timeSort);
+  });
+
+  const toggleCollapse = (day: string) => {
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+    setCollapsed((prev) => ({ ...prev, [day]: !prev[day] }));
+  };
 
   return (
     <>
@@ -44,42 +97,52 @@ export default function StageDetail() {
         options={{
           title: stage?.name || 'Stage',
           headerBackTitle: 'Back',
-          headerStyle: {
-            backgroundColor: 'black',
-          },
-          headerTintColor: 'white', // adjust this if you have a `text` color in your theme
+          headerStyle: { backgroundColor: 'black' },
+          headerTintColor: 'white',
         }}
       />
 
       {loading ? (
-        <View style={[styles.container, { backgroundColor: theme.background }]}>
+        <View style={[styles.container, { backgroundColor: theme.background }]}> 
           <Text style={styles.title}>Loading...</Text>
         </View>
       ) : !stage ? (
-        <View style={[styles.container, { backgroundColor: theme.background }]}>
+        <View style={[styles.container, { backgroundColor: theme.background }]}> 
           <Text style={styles.error}>Stage not found</Text>
         </View>
       ) : (
-        <ScrollView contentContainerStyle={[styles.container, { backgroundColor: theme.background }]}>
+        <ScrollView contentContainerStyle={[styles.container, { backgroundColor: theme.background }]}> 
           <View style={styles.card}>
             <Image source={photoMap[slug]} style={styles.image} />
             <Image source={logoMap[slug]} style={styles.logoOverlay} />
           </View>
           <Text style={styles.description}>{stage.description}</Text>
 
-          {stagePerformances.map((performance) => (
-            <PerformanceCard
-              day={performance.day}
-              start={performance.start}
-              end={performance.end}
-              artist={performance.artist}
-              genre={performance.genre}
-              description={performance.description}
-              uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-              key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-            />
-            ))}
-
+          {dayOrder.map((day) => (
+            performancesByDay[day].length > 0 && (
+              <View key={day} style={{ marginBottom: 20 }}>
+                <Pressable onPress={() => toggleCollapse(day)}>
+                  <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#E30083', marginTop: 20 }}>
+                    {collapsed[day] ? '▶' : '▼'} {day}
+                  </Text>
+                </Pressable>
+                {!collapsed[day] && (
+                  performancesByDay[day].map((performance) => (
+                    <PerformanceCard
+                      key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+                      uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+                      day={performance.day}
+                      start={performance.start}
+                      end={performance.end}
+                      artist={performance.artist}
+                      genre={performance.genre}
+                      description={performance.description}
+                    />
+                  ))
+                )}
+              </View>
+            )
+          ))}
         </ScrollView>
       )}
     </>
