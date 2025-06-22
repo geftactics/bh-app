@@ -1,27 +1,37 @@
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import StageCard from '@/components/StageCard';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { photoMap } from '@/constants/StageImages';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Asset } from 'expo-asset';
 import { useNavigation } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, StyleSheet } from 'react-native';
 
 export default function TabTwoScreen() {
-
   const [stages, setStages] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollRef = useRef<{ scrollTo: (params: { y: number; animated?: boolean }) => void }>(null);
   const navigation = useNavigation();
 
   useEffect(() => {
-    AsyncStorage.getItem('stages').then((json) => {
-      if (json) {
-        setStages(JSON.parse(json));
-      }
-      setLoading(false);
-    });
-  }, []);
+    const loadStagesAndImages = async () => {
+      const json = await AsyncStorage.getItem('stages');
+      const stageList = json ? JSON.parse(json) : [];
 
+      const preloadPromises = stageList.map((stage: any) => {
+        const imageModule = photoMap[stage.slug]; 
+        return Asset.fromModule(imageModule).downloadAsync();
+      });
+
+      await Promise.all(preloadPromises); 
+
+      setStages(stageList);
+      setLoading(false);
+    };
+
+    loadStagesAndImages();
+  }, []);
 
   if (loading) {
     return <ActivityIndicator size="large" />;
@@ -40,16 +50,10 @@ export default function TabTwoScreen() {
         />
       }
     >
-      {/* <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Stages</ThemedText>
-      </ThemedView>
-      <ThemedText>This page will be stages list</ThemedText> */}
-
       {stages.map((stage) => (
         <StageCard key={stage.slug} name={stage.name} slug={stage.slug} />
       ))}
     </ParallaxScrollView>
-
   );
 }
 

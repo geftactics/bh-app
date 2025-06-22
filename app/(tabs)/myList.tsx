@@ -74,8 +74,10 @@ export default function TabTwoScreen() {
       </ThemedView>
 
       {performances.map((performance) => (
-        <PerformanceCard
+        <ThemedView
           key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+          style={{ marginHorizontal: -15, marginVertical: 0 }}>
+        <PerformanceCard
           uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
           day={performance.day}
           start={performance.start}
@@ -84,7 +86,7 @@ export default function TabTwoScreen() {
           genre={performance.genre}
           description={performance.description}
           venue={performance.venue}
-        />
+        /></ThemedView>
       ))}
     </ParallaxScrollView>
   );

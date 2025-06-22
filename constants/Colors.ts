@@ -10,7 +10,7 @@ export const Colors = {
   light: {
     text: '#11181C',
     buttonText: '#FFFFFF',
-    background: '#fff',
+    background: '#FFE200',
     tint: tintColorLight,
     icon: '#687076',
     tabIconDefault: '#687076',

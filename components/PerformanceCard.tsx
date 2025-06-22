@@ -127,7 +127,7 @@ export default function PerformanceCard({
     <Pressable onPress={handleCardPress} style={[styles.card, fadedOut && { opacity: 0.6 }]}>
       <View style={styles.row}>
         <Text style={styles.heading}>
-          {artist ? `${artist}\n` : ''}
+          {artist && venue ? `${artist}\n` : ''}
           {venue ? `${formattedVenue}\n${day} - ` : ''}
           {start}-{end}
           {!venue ? ` – ${artist.replace(/-/g, ' ')} ` : ''}

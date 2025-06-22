@@ -56,7 +56,12 @@ export default function ArtistDetail() {
           <Text style={styles.error}>Artist not found</Text>
         </View>
       ) : (
-        <ScrollView contentContainerStyle={[styles.container, { backgroundColor: theme.background }]}>
+        <ScrollView
+          contentContainerStyle={[
+            styles.container,
+            { backgroundColor: theme.background, paddingBottom: 80 },
+          ]}
+        >
           <View style={styles.topRow}>
             <View style={styles.imageContainer}>
               <Image
@@ -83,7 +88,10 @@ export default function ArtistDetail() {
           )}
 
           {sortedPerformances.map((performance) => (
-            <View style={[styles.descriptionContainer, { padding: 0 }]}>
+            <View 
+              style={[styles.descriptionContainer, { padding: 0 }]}
+              key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+            >
             <PerformanceCard
               day={performance.day}
               start={performance.start}
@@ -93,7 +101,6 @@ export default function ArtistDetail() {
               genre={performance.genre}
               description={performance.description}
               uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-              key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
             />
             </View>
           ))}

@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import NoPerformanceCard from '@/components/NoPerformanceCard';
@@ -8,35 +8,45 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import PerformanceCard from '@/components/PerformanceCard';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
-// Convert a performance's day and time into a JavaScript Date
 function parsePerformanceDate(day: string, time: string): Date {
-  const dayMap: Record<string, number> = {
-    Thursday: 4,
-    Friday: 5,
-    Saturday: 6,
-    Sunday: 0,
+  const [hh, mm] = [parseInt(time.slice(0, 2)), parseInt(time.slice(2))];
+
+  const dayOffset: Record<string, number> = {
+    Thursday: 0,
+    Friday: 1,
+    Saturday: 2,
+    Sunday: 3,
   };
 
-  const [hh, mm] = [parseInt(time.slice(0, 2)), parseInt(time.slice(2))];
   const now = new Date();
-  const result = new Date(now);
 
-  const daysUntil = (dayMap[day] - now.getDay() + 7) % 7;
-  result.setDate(now.getDate() + daysUntil);
-  result.setHours(hh, mm, 0, 0);
+  // Step 1: Find the *Thursday* of this week
+  const dayOfWeek = now.getDay(); // 0 (Sun) to 6 (Sat)
+  const daysSinceThursday = (dayOfWeek + 7 - 4) % 7; // 4 = Thursday
+  const festivalThursday = new Date(now);
+  festivalThursday.setDate(now.getDate() - daysSinceThursday);
+  festivalThursday.setHours(0, 0, 0, 0);
 
-  // Treat 0000–0459 as part of previous day
+  // Step 2: Add offset for correct day (Fri = +1, Sat = +2, etc)
+  const performanceDate = new Date(festivalThursday);
+  performanceDate.setDate(festivalThursday.getDate() + dayOffset[day]);
+
+  // Step 3: Apply hour/minute
+  performanceDate.setHours(hh, mm, 0, 0);
+
+  // Step 4: Treat late-night (e.g., 0200) as next calendar day
   if (hh < 5) {
-    result.setDate(result.getDate() + 1);
+    performanceDate.setDate(performanceDate.getDate() + 1);
   }
 
-  return result;
+  return performanceDate;
 }
 
 export default function NowNextScreen() {
   const [stages, setStages] = useState<any[]>([]);
   const [lineup, setLineup] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [now, setNow] = useState(new Date());
 
   useFocusEffect(
     useCallback(() => {
@@ -55,7 +65,14 @@ export default function NowNextScreen() {
     }, [])
   );
 
-  const now = new Date();
+  // Refresh the current time every minute
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNow(new Date());
+    }, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const getNowAndNext = (slug: string) => {
     const events = lineup
@@ -105,12 +122,11 @@ export default function NowNextScreen() {
                   artist={current.artist}
                   genre={current.genre}
                   description={current.description}
-                  venue={current.venue}
                 />
               ) : (
                 <NoPerformanceCard
                   key={`now-closed-${stage.slug}`}
-                  description='Now – Venue closed'
+                  description="Now – Venue closed"
                 />
               )}
 
@@ -124,12 +140,11 @@ export default function NowNextScreen() {
                   artist={next.artist}
                   genre={next.genre}
                   description={next.description}
-                  venue={next.venue}
                 />
               ) : (
                 <NoPerformanceCard
                   key={`next-closed-${stage.slug}`}
-                  description='Next – Venue closed'
+                  description="Next – Venue closed"
                 />
               )}
             </View>
