@@ -15,6 +15,8 @@ type Props = {
   artist: string;
 };
 
+const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
+
 export default function PerformanceCard({
   uid,
   day,
@@ -41,7 +43,6 @@ export default function PerformanceCard({
     });
   }, [venue]);
 
-  // Check if performance is already in favourites
   useEffect(() => {
     AsyncStorage.getItem('favourites').then((data) => {
       if (data) {
@@ -77,8 +78,51 @@ export default function PerformanceCard({
     }
   };
 
+  // === Check if this event has finished ===
+  function hasEventFinished() {
+    const now = new Date();
+
+    const dayIndexMap: Record<string, number> = {
+      Sunday: 0,
+      Monday: 1,
+      Tuesday: 2,
+      Wednesday: 3,
+      Thursday: 4,
+      Friday: 5,
+      Saturday: 6,
+    };
+
+    const eventDayIndex = dayIndexMap[day];
+    if (eventDayIndex === undefined) return false;
+
+    const endHour = parseInt(end.slice(0, 2), 10);
+    const endMin = parseInt(end.slice(2), 10);
+
+    // Start by finding the most recent occurrence of this event's day
+    const eventEnd = new Date(now);
+    const daysSinceEvent =
+      (now.getDay() - eventDayIndex + 7) % 7; // how many days ago the event's day was
+    eventEnd.setDate(now.getDate() - daysSinceEvent);
+
+    eventEnd.setHours(endHour);
+    eventEnd.setMinutes(endMin);
+    eventEnd.setSeconds(0);
+    eventEnd.setMilliseconds(0);
+
+    // Handle post-midnight performances (e.g. 0100): those actually happen the next calendar day
+    if (endHour < 5) {
+      eventEnd.setDate(eventEnd.getDate() + 1);
+    }
+
+    return now.getTime() > eventEnd.getTime();
+  }
+
+
+
+  const fadedOut = hasEventFinished();
+
   return (
-    <Pressable onPress={handleCardPress} style={styles.card}>
+    <Pressable onPress={handleCardPress} style={[styles.card, fadedOut && { opacity: 0.5 }]}>
       <View style={styles.row}>
         <Text style={styles.heading}>
           {venue ? `${formattedVenue}\n${day} - ` : ''}

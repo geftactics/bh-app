@@ -3521,6 +3521,16 @@
   },
   {
     "day": "Sunday",
+    "start": "1100",
+    "end": "1130",
+    "venue": "stumblefunk-factory",
+    "artist": "Gong Bath",
+    "description": "Fixing broken ravers",
+    "genre": "Unplugged",
+    "image": "https://beatherder.co.uk/assets/thumbs/artdd1665.jpg"
+  },
+  {
+    "day": "Sunday",
     "start": "1500",
     "end": "1600",
     "venue": "stumblefunk-factory",
