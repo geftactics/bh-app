@@ -1,72 +1,149 @@
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useEffect, useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function HomeScreen() {
+// Convert a performance's day and time into a JavaScript Date
+function parsePerformanceDate(day: string, time: string): Date {
+  const dayMap: Record<string, number> = {
+    Thursday: 4,
+    Friday: 5,
+    Saturday: 6,
+    Sunday: 0,
+  };
+
+  const [hh, mm] = [parseInt(time.slice(0, 2)), parseInt(time.slice(2))];
+  const now = new Date();
+  const result = new Date(now);
+
+  const daysUntil = (dayMap[day] - now.getDay() + 7) % 7;
+  result.setDate(now.getDate() + daysUntil);
+  result.setHours(hh, mm, 0, 0);
+
+  // Treat 0000–0459 as part of previous day
+  if (hh < 5) {
+    result.setDate(result.getDate() + 1);
+  }
+
+  return result;
+}
+
+export default function NowNextScreen() {
+  const [stages, setStages] = useState<any[]>([]);
+  const [lineup, setLineup] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const load = async () => {
+      const [s, l] = await Promise.all([
+        AsyncStorage.getItem('stages'),
+        AsyncStorage.getItem('lineup'),
+      ]);
+      setStages(s ? JSON.parse(s) : []);
+      setLineup(l ? JSON.parse(l) : []);
+      setLoading(false);
+    };
+    load();
+  }, []);
+
+  const now = new Date();
+
+  const getNowAndNext = (slug: string) => {
+    const events = lineup
+      .filter((e) => e.venue === slug)
+      .map((e) => ({
+        ...e,
+        startDate: parsePerformanceDate(e.day, e.start),
+        endDate: parsePerformanceDate(e.day, e.end),
+      }))
+      .sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
+
+    const current = events.find((e) => now >= e.startDate && now <= e.endDate);
+    const next = events.find((e) => e.startDate > now);
+
+    return { current, next };
+  };
+
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+        <IconSymbol
+          size={310}
+          color="#808080"
+          name="chevron.left.forwardslash.chevron.right"
+          style={styles.headerImage}
         />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Now & Next</ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
+      }
+    >
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>Now & Next</Text>
+      </View>
+
+      {loading ? (
+        <Text style={styles.loading}>Loading…</Text>
+      ) : (
+        stages.map((stage) => {
+          const { current, next } = getNowAndNext(stage.slug);
+
+          return (
+            <View key={stage.slug} style={styles.stageBlock}>
+              <Text style={styles.stageTitle}>{stage.name}</Text>
+              {current ? (
+                <Text style={styles.now}>Now: {current.artist} ({current.start}–{current.end})</Text>
+              ) : (
+                <Text style={styles.closed}>Now: venue closed</Text>
+              )}
+              {next ? (
+                <Text style={styles.next}>Next: {next.artist} ({next.start}–{next.end})</Text>
+              ) : null}
+            </View>
+          );
+        })
+      )}
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  headerImage: {
+    color: '#808080',
+    bottom: -90,
+    left: -35,
+    position: 'absolute',
+  },
   titleContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
     gap: 8,
+    padding: 16,
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  loading: {
+    padding: 20,
+    fontStyle: 'italic',
+  },
+  stageBlock: {
+    padding: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+  },
+  stageTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 4,
+  },
+  now: {
+    color: 'green',
+  },
+  next: {
+    color: 'blue',
+  },
+  closed: {
+    color: 'gray',
+    fontStyle: 'italic',
   },
 });

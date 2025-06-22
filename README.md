@@ -6,7 +6,7 @@ More adventures in trying to get a bit better at mobile app development.
 - Maps
 - Now & Next
 - My list
-- Ordering logic (stages view)
+- image preload
 - Past performances
 - Split out PerformanceCard component
 
