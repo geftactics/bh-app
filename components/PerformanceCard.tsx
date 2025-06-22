@@ -12,7 +12,7 @@ type Props = {
   genre: string;
   venue?: string;
   description: string;
-  artist: string;
+  artist?: string;
 };
 
 const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -66,6 +66,8 @@ export default function PerformanceCard({
       }
 
       await AsyncStorage.setItem('favourites', JSON.stringify(favs));
+      console.log(favs);
+
     } catch (error) {
       console.error('Error toggling favourite:', error);
     }
@@ -73,7 +75,7 @@ export default function PerformanceCard({
 
   const handleCardPress = () => {
     const slug = artist.replace(/\s+/g, '_');
-    if (!venue) {
+    if (!venue || artist) {
       router.push(`/artists/${slug}`, { withAnchor: true });
     }
   };
@@ -125,6 +127,7 @@ export default function PerformanceCard({
     <Pressable onPress={handleCardPress} style={[styles.card, fadedOut && { opacity: 0.6 }]}>
       <View style={styles.row}>
         <Text style={styles.heading}>
+          {artist ? `${artist}\n` : ''}
           {venue ? `${formattedVenue}\n${day} - ` : ''}
           {start}-{end}
           {!venue ? ` – ${artist.replace(/-/g, ' ')} ` : ''}

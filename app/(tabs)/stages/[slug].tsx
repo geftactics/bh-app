@@ -186,8 +186,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   description: {
-    fontSize: 16,
-    lineHeight: 22,
+    fontSize: 14,
+
   },
   error: {
     color: 'red',

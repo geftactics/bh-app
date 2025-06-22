@@ -141,6 +141,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   descriptionContainer: {
+    fontSize: 16,
+    lineHeight: 20,
     marginHorizontal: 18,
     marginBottom: 10,
   },
