@@ -3532,11 +3532,21 @@
   {
     "day": "Sunday",
     "start": "1100",
-    "end": "1130",
+    "end": "1200",
     "venue": "stumblefunk-factory",
     "artist": "Gong Bath",
     "description": "Fixing broken ravers",
     "genre": "Unplugged",
+    "image": "https://beatherder.co.uk/assets/thumbs/artdd1665.jpg"
+  },
+  {
+    "day": "Sunday",
+    "start": "1200",
+    "end": "1500",
+    "venue": "stumblefunk-factory",
+    "artist": "Stumblefunk Brownstars",
+    "description": "Filling you in",
+    "genre": "Misc",
     "image": "https://beatherder.co.uk/assets/thumbs/artdd1665.jpg"
   },
   {
