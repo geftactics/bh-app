@@ -111,7 +111,7 @@ export default function StageDetail() {
           <Text style={styles.error}>Stage not found</Text>
         </View>
       ) : (
-        <ScrollView contentContainerStyle={[styles.container, { backgroundColor: theme.background }]}> 
+        <ScrollView contentContainerStyle={[styles.container, { backgroundColor: theme.background, paddingBottom: 100 }]}> 
           <View style={styles.card}>
             <Image source={photoMap[slug]} style={styles.image} />
             <Image source={logoMap[slug]} style={styles.logoOverlay} />
