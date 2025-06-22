@@ -14,12 +14,9 @@ export default function TabTwoScreen() {
   const scrollRef = useRef<{ scrollTo: (params: { y: number; animated?: boolean }) => void }>(null);
   const navigation = useNavigation();
 
-  
-
   useFocusEffect(
     useCallback(() => {
       let isActive = true;
-      console.log('artists....')
       const loadData = async () => {
         const json = await AsyncStorage.getItem('lineup');
         if (json && isActive) {
