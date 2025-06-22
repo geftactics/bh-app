@@ -77,12 +77,13 @@ export default function ArtistDetail() {
           </View>
 
           {artist.description && (
-            <View style={styles.descriptionContainer}>
+            <View style={[styles.descriptionContainer, { padding: 7 }]}>
               <Text>{artist.description}</Text>
             </View>
           )}
 
           {sortedPerformances.map((performance) => (
+            <View style={[styles.descriptionContainer, { padding: 0 }]}>
             <PerformanceCard
               day={performance.day}
               start={performance.start}
@@ -94,6 +95,7 @@ export default function ArtistDetail() {
               uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
               key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
             />
+            </View>
           ))}
         </ScrollView>
       )}
@@ -105,6 +107,9 @@ const styles = StyleSheet.create({
   container: {
     padding: 0,
     flexGrow: 1,
+  },
+  innerContainer: {
+    padding:10
   },
   topRow: {
     flexDirection: 'row',

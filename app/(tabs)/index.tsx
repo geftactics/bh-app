@@ -1,4 +1,6 @@
+import NoPerformanceCard from '@/components/NoPerformanceCard';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
+import PerformanceCard from '@/components/PerformanceCard';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect, useState } from 'react';
@@ -77,12 +79,9 @@ export default function NowNextScreen() {
         />
       }
     >
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>Now & Next</Text>
-      </View>
 
       {loading ? (
-        <Text style={styles.loading}>Loading…</Text>
+        <Text style={styles.loading}>Loading...</Text>
       ) : (
         stages.map((stage) => {
           const { current, next } = getNowAndNext(stage.slug);
@@ -91,13 +90,39 @@ export default function NowNextScreen() {
             <View key={stage.slug} style={styles.stageBlock}>
               <Text style={styles.stageTitle}>{stage.name}</Text>
               {current ? (
-                <Text style={styles.now}>Now: {current.artist} ({current.start}–{current.end})</Text>
+                <PerformanceCard
+                  key={`${current.day}-${current.venue}-${current.start}-${current.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+                  uid={`${current.day}-${current.venue}-${current.start}-${current.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+                  day={current.day}
+                  start={current.start}
+                  end={current.end}
+                  artist={current.artist}
+                  genre={current.genre}
+                  description={current.description}
+                />
               ) : (
-                <Text style={styles.closed}>Now: venue closed</Text>
+                <NoPerformanceCard
+                  key={`venue-closed-${Math.random().toString(36).substr(2, 9)}`}
+                  description='Now - Venue closed'
+                />
               )}
               {next ? (
-                <Text style={styles.next}>Next: {next.artist} ({next.start}–{next.end})</Text>
-              ) : null}
+                <PerformanceCard
+                  key={`${next.day}-${next.venue}-${next.start}-${next.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+                  uid={`${next.day}-${next.venue}-${next.start}-${next.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+                  day={next.day}
+                  start={next.start}
+                  end={next.end}
+                  artist={next.artist}
+                  genre={next.genre}
+                  description={next.description}
+                />
+              ) : (
+                <NoPerformanceCard
+                  key={`venue-closed-${Math.random().toString(36).substr(2, 9)}`}
+                  description='Next - Venue closed'
+                />
+              )}
             </View>
           );
         })
@@ -127,7 +152,9 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   stageBlock: {
-    padding: 16,
+    marginHorizontal: -15,
+    paddingBottom: 20,
+    marginBottom: 5,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
   },
@@ -135,6 +162,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 4,
+    color: '#E30083'
   },
   now: {
     color: 'green',

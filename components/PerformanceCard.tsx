@@ -122,7 +122,7 @@ export default function PerformanceCard({
   const fadedOut = hasEventFinished();
 
   return (
-    <Pressable onPress={handleCardPress} style={[styles.card, fadedOut && { opacity: 0.5 }]}>
+    <Pressable onPress={handleCardPress} style={[styles.card, fadedOut && { opacity: 0.6 }]}>
       <View style={styles.row}>
         <Text style={styles.heading}>
           {venue ? `${formattedVenue}\n${day} - ` : ''}
@@ -145,9 +145,10 @@ export default function PerformanceCard({
 const styles = StyleSheet.create({
   card: {
     backgroundColor: '#eee',
-    marginHorizontal: 15,
+    marginHorizontal: 5,
     marginVertical: 8,
     borderRadius: 12,
+    minHeight: 75,
     padding: 16,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
