@@ -1,14 +1,13 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import { useCallback, useState } from 'react';
-import { StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
 import lineup from '@/assets/data/lineup.json';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import PerformanceCard from '@/components/PerformanceCard';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function TabTwoScreen() {
   const [favourites, setFavourites] = useState<string[]>([]);
@@ -61,11 +60,9 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+        <Image
+          source={require('@/assets/images/header-logo.png')}
+          style={styles.topImage}
         />
       }
     >
@@ -73,23 +70,38 @@ export default function TabTwoScreen() {
         <ThemedText type="title">My List</ThemedText>
       </ThemedView>
 
-      {performances.map((performance) => (
-        <ThemedView
-          key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-          style={{ marginHorizontal: -15, marginVertical: 0 }}>
-        <PerformanceCard
-          uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-          day={performance.day}
-          start={performance.start}
-          end={performance.end}
-          artist={performance.artist}
-          genre={performance.genre}
-          description={performance.description}
-          venue={performance.venue}
-        /></ThemedView>
-      ))}
+      {performances.length === 0 ? (
+        <ThemedView style={styles.emptyContainer}>
+          <ThemedText type="default" style={styles.emptyText}>Oh! So empty!</ThemedText>
+          <ThemedText type="default" style={styles.emptyText}> </ThemedText>
+          <ThemedText type="default" style={styles.emptyText}>
+            Click the 🖤 next to the things you like to add them to your list!
+          </ThemedText>
+        </ThemedView>
+      ) : (
+        performances.map((performance) => (
+          <ThemedView
+            key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+            style={{ marginHorizontal: -15, marginVertical: -5 }}
+          >
+            <PerformanceCard
+              uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
+              day={performance.day}
+              start={performance.start}
+              end={performance.end}
+              artist={performance.artist}
+              genre={performance.genre}
+              description={performance.description}
+              venue={performance.venue}
+            />
+          </ThemedView>
+        ))
+      )}
     </ParallaxScrollView>
   );
+
+  
+
 }
 
 const styles = StyleSheet.create({
@@ -102,5 +114,24 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+    emptyContainer: {
+    padding: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  emptyText: {
+    fontSize: 16,
+    color: '#666',
+    fontStyle: 'italic',
+    textAlign: 'center',
+  },
+  topImage: {
+    height: 178,
+    width: 290,
+    position: 'absolute',
+    bottom: 0,
+    left: '50%',
+    transform: [{ translateX: -145 }], // half of width to center it
   },
 });

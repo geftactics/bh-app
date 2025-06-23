@@ -17,6 +17,8 @@ export default function RootLayout() {
 
   async function loadSchedule() {
     try {
+      console.log('loading data...')
+      setError(false);
       await fetchData();
       setLoading(false); // Only clear loading on initial load
     } catch (e) {
@@ -51,6 +53,7 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="artists/[slug]" options={{ presentation: 'card', headerShown: true }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

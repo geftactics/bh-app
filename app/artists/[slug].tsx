@@ -1,15 +1,17 @@
 import PerformanceCard from '@/components/PerformanceCard';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Stack, useLocalSearchParams } from 'expo-router';
-import { useEffect, useState } from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Stack, useLocalSearchParams, useNavigation } from 'expo-router';
+import { useEffect, useLayoutEffect, useState } from 'react';
+import { ActivityIndicator, Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 export default function ArtistDetail() {
   const colorScheme = useColorScheme();
+  const navigation = useNavigation();
   const theme = Colors[colorScheme];
   const { slug } = useLocalSearchParams<{ slug: string }>();
 
@@ -17,6 +19,22 @@ export default function ArtistDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => (
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={{ flexDirection: 'row', alignItems: 'center', marginLeft: Platform.OS === 'ios' ? -10 : 0 }}
+        >
+          <Ionicons name="chevron-back" size={24} color={Platform.OS === 'ios' ? '#fff' : '#fff'} />
+          {Platform.OS === 'ios' && (
+            <Text style={{ color: '#fff', fontSize: 17, marginLeft: 2 }}>Back</Text>
+          )}
+        </TouchableOpacity>
+      ),
+    });
+  }, [navigation]);
+  
   useEffect(() => {
     AsyncStorage.getItem('lineup').then((json) => {
       if (json) {
@@ -26,7 +44,8 @@ export default function ArtistDetail() {
     });
   }, []);
 
-  const artistName = slug?.replace(/_/g, ' ');
+  const artistName = slug ? decodeURIComponent(slug) : '';
+
   const artistPerformances = entries.filter((e) => e.artist === artistName);
 
   const artist = artistPerformances[0]; // use first performance for image/description etc
@@ -49,7 +68,7 @@ export default function ArtistDetail() {
 
       {loading ? (
         <View style={[styles.container, { backgroundColor: theme.background }]}>
-          <Text style={styles.title}>Loading...</Text>
+          <ActivityIndicator size="large" color="#E30083" />
         </View>
       ) : !artist ? (
         <View style={[styles.container, { backgroundColor: theme.background }]}>
@@ -67,7 +86,7 @@ export default function ArtistDetail() {
               <Image
                 source={
                   error || !artist.image
-                    ? require('../../../assets/images/placeholder.jpg')
+                    ? require('../../assets/images/placeholder.png')
                     : { uri: artist.image }
                 }
                 style={styles.image}
@@ -83,7 +102,7 @@ export default function ArtistDetail() {
 
           {artist.description && (
             <View style={[styles.descriptionContainer, { padding: 7 }]}>
-              <Text>{artist.description}</Text>
+              <Text style={styles.descriptionText}>{artist.description}</Text>
             </View>
           )}
 
@@ -93,6 +112,7 @@ export default function ArtistDetail() {
               key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
             >
             <PerformanceCard
+              noLink={true}
               day={performance.day}
               start={performance.start}
               end={performance.end}
@@ -147,9 +167,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 10,
   },
-  descriptionContainer: {
+  descriptionText: {
     fontSize: 16,
-    lineHeight: 20,
+  },
+  descriptionContainer: {
     marginHorizontal: 18,
     marginBottom: 10,
   },

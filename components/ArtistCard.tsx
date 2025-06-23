@@ -28,7 +28,7 @@ export default function ArtistCard({
           <Image
             source={
               error || !image
-                ? require('../assets/images/placeholder.jpg') 
+                ? require('../assets/images/placeholder.png') 
                 : { uri: image }
             }
             style={styles.image}
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     width: '100%',
     marginBottom: 0,
+    marginTop: -10,
   },
   card: {
     flexDirection: 'row',
@@ -98,6 +99,6 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: '#ccc',
     marginHorizontal: 10,
-    marginTop: 15,
+    marginTop: 5,
   },
 });

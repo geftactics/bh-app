@@ -1,12 +1,11 @@
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import StageCard from '@/components/StageCard';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 import { photoMap } from '@/constants/StageImages';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Asset } from 'expo-asset';
 import { useNavigation } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, StyleSheet } from 'react-native';
+import { ActivityIndicator, Image, StyleSheet } from 'react-native';
 
 export default function TabTwoScreen() {
   const [stages, setStages] = useState<any[]>([]);
@@ -42,12 +41,10 @@ export default function TabTwoScreen() {
       ref={scrollRef}
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
+          <Image
+            source={require('@/assets/images/header-logo.png')}
+            style={styles.topImage}
+          />
       }
     >
       {stages.map((stage) => (
@@ -67,5 +64,13 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  topImage: {
+    height: 178,
+    width: 290,
+    position: 'absolute',
+    bottom: 0,
+    left: '50%',
+    transform: [{ translateX: -145 }], // half of width to center it
   },
 });

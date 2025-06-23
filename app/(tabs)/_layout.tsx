@@ -34,8 +34,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Now/Next',
-          tabBarIcon: ({ color }) => (<MaterialIcons name="access-time" size={28} color={color} />)
+          href: null,
         }}
       />
       <Tabs.Screen
@@ -50,6 +49,13 @@ export default function TabLayout() {
         options={{
           title: 'Artists',
           tabBarIcon: ({ color }) => (<MaterialIcons name="people" size={28} color={color} />)
+        }}
+      />
+      <Tabs.Screen
+        name="nowNext"
+        options={{
+          title: 'Now/Next',
+          tabBarIcon: ({ color }) => (<MaterialIcons name="access-time" size={28} color={color} />)
         }}
       />
       <Tabs.Screen

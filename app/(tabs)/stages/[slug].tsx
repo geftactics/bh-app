@@ -8,6 +8,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import React, { useState } from 'react';
 import {
+  ActivityIndicator,
   Image,
   LayoutAnimation,
   Platform,
@@ -63,6 +64,7 @@ export default function StageDetail() {
     };
   });
 
+
   useFocusEffect(
     React.useCallback(() => {
       let isActive = true;
@@ -117,7 +119,7 @@ export default function StageDetail() {
 
       {loading ? (
         <View style={[styles.container, { backgroundColor: theme.background }]}> 
-          <Text style={styles.title}>Loading...</Text>
+          <ActivityIndicator size="large" color="#E30083" />
         </View>
       ) : !stage ? (
         <View style={[styles.container, { backgroundColor: theme.background }]}> 
@@ -199,7 +201,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   description: {
-    fontSize: 14,
+    fontSize: 16,
 
   },
   error: {

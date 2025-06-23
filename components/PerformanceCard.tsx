@@ -12,7 +12,8 @@ type Props = {
   genre: string;
   venue?: string;
   description: string;
-  artist?: string;
+  artist: string;
+  noLink?: boolean;
 };
 
 const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -22,6 +23,7 @@ export default function PerformanceCard({
   day,
   start,
   end,
+  noLink,
   description,
   artist,
   genre,
@@ -74,8 +76,8 @@ export default function PerformanceCard({
   };
 
   const handleCardPress = () => {
-    const slug = artist.replace(/\s+/g, '_');
-    if (!venue || artist) {
+    const slug = encodeURIComponent(artist);
+    if (!noLink) {
       router.push(`/artists/${slug}`, { withAnchor: true });
     }
   };
