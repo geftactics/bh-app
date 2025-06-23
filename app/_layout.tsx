@@ -3,7 +3,7 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useRef, useState } from 'react';
-import { AppState, AppStateStatus } from 'react-native';
+import { AppState, AppStateStatus, Image } from 'react-native';
 import 'react-native-reanimated';
 import LoadingScreen from '../components/LoadingScreen';
 import LoadingScreenError from '../components/LoadingScreenError';
@@ -36,6 +36,11 @@ export default function RootLayout() {
   useEffect(() => {
     const subscription = AppState.addEventListener('change', handleAppStateChange);
     return () => subscription.remove(); // Clean up
+  }, []);
+
+  useEffect(() => {
+    // Triggers the system to decode/cache the image early
+    Image.resolveAssetSource(require('@/assets/images/header-logo.png'));
   }, []);
 
   const handleAppStateChange = (nextAppState: AppStateStatus) => {
