@@ -86,6 +86,10 @@ export default function PerformanceCard({
   function hasEventFinished() {
     const now = new Date();
 
+    // Early exit based on fixed date range
+    if (now < new Date('2025-06-26')) return false; 
+    if (now > new Date('2025-06-29T23:59:59')) return true;
+
     const dayIndexMap: Record<string, number> = {
       Sunday: 0,
       Monday: 1,
