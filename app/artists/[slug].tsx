@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   },
   artistName: {
     fontWeight: 'bold',
-    fontSize: 36,
+    fontSize: 29,
     color: 'black',
     textAlign: 'center',
     paddingHorizontal: 10,
