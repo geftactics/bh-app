@@ -84,45 +84,61 @@ export default function PerformanceCard({
 
   // === Check if this event has finished ===
   function hasEventFinished() {
+
+    const festivalStart = new Date('2025-06-26');
+    const festivalEnd = new Date('2025-06-29T23:59:59');
+
     const now = new Date();
-
-    // Early exit based on fixed date range
-    if (now < new Date('2025-06-26')) return false; 
-    if (now > new Date('2025-06-29T23:59:59')) return true;
-
+    const today = new Date().getDay() || 7;
+    const endHour = parseInt(end.slice(0, 2), 10);
+    const endMin = parseInt(end.slice(2), 10);
     const dayIndexMap: Record<string, number> = {
-      Sunday: 0,
       Monday: 1,
       Tuesday: 2,
       Wednesday: 3,
       Thursday: 4,
       Friday: 5,
       Saturday: 6,
+      Sunday: 7,
     };
 
-    const eventDayIndex = dayIndexMap[day];
-    if (eventDayIndex === undefined) return false;
+    
 
-    const endHour = parseInt(end.slice(0, 2), 10);
-    const endMin = parseInt(end.slice(2), 10);
+    // Before festival
+    if (now < festivalStart) return false; 
 
-    // Start by finding the most recent occurrence of this event's day
-    const eventEnd = new Date(now);
-    const daysSinceEvent =
-      (now.getDay() - eventDayIndex + 7) % 7; // how many days ago the event's day was
-    eventEnd.setDate(now.getDate() - daysSinceEvent);
+    // After festival
+    if (now > festivalEnd) return true;
 
-    eventEnd.setHours(endHour);
-    eventEnd.setMinutes(endMin);
-    eventEnd.setSeconds(0);
-    eventEnd.setMilliseconds(0);
+    // Performance is after today
+    if (today < dayIndexMap[day]) return false;
 
-    // Handle post-midnight performances (e.g. 0100): those actually happen the next calendar day
-    if (endHour < 5) {
-      eventEnd.setDate(eventEnd.getDate() + 1);
+    // Performance is before today
+    if (today > dayIndexMap[day]) return true;
+
+    // Performance is today
+    if (today === dayIndexMap[day]) {
+      const endInt = parseInt(end, 10);
+      const nowStamp = parseInt(`${now.getHours()}${now.getMinutes().toString().padStart(2, '0')}`, 10);
+      console.log('--')
+      console.log(artist)
+      console.log('endInt', endInt)
+      console.log('nowStamp', nowStamp)
+      if (endInt < 500) { // post midnight performance
+        if (nowStamp < 500) { // and the actual time is post midnight
+          if (nowStamp > endInt) return true; //safe to compare, event is over
+          else return false; // or not over
+        }
+        else return false; // not post midnight yet, so hasnt finished
+      }
+      if (nowStamp < 500) {
+        return true; // past midnight so we finished
+      }
+      if (nowStamp > endInt) return true; // pre-midnight check  
+      
     }
 
-    return now.getTime() > eventEnd.getTime();
+    return false;
   }
 
 

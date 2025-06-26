@@ -12,7 +12,9 @@
       "bundleIdentifier": "org.squiggle.beat-herder",
       "supportsTablet": true,
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocationWhenInUseUsageDescription": "We use your location to show where you are on the map",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "We use your location..."
       }
     },
     "android": {
