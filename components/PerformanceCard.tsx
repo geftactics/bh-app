@@ -82,16 +82,23 @@ export default function PerformanceCard({
     }
   };
 
-  // === Check if this event has finished ===
   function hasEventFinished() {
-
     const festivalStart = new Date('2025-06-26');
     const festivalEnd = new Date('2025-06-29T23:59:59');
 
     const now = new Date();
-    const today = new Date().getDay() || 7;
-    const endHour = parseInt(end.slice(0, 2), 10);
-    const endMin = parseInt(end.slice(2), 10);
+
+    const getFestivalDayIndex = (date: Date) => {
+      const adjusted = new Date(date);
+      if (adjusted.getHours() < 5) {
+        adjusted.setDate(adjusted.getDate() - 1);
+      }
+      const dayIndex = adjusted.getDay(); // Sunday = 0
+      return dayIndex === 0 ? 7 : dayIndex; // Sunday as 7
+    };
+
+    const today = getFestivalDayIndex(now);
+
     const dayIndexMap: Record<string, number> = {
       Monday: 1,
       Tuesday: 2,
@@ -102,40 +109,47 @@ export default function PerformanceCard({
       Sunday: 7,
     };
 
-    
+    const endHour = parseInt(end.slice(0, 2), 10);
+    const endMin = parseInt(end.slice(2), 10);
+    const endInt = parseInt(end, 10);
+    const nowStamp = parseInt(
+      `${now.getHours()}${now.getMinutes().toString().padStart(2, '0')}`,
+      10
+    );
 
     // Before festival
-    if (now < festivalStart) return false; 
+    if (now < festivalStart) return false;
 
     // After festival
     if (now > festivalEnd) return true;
 
+    const perfDayIndex = dayIndexMap[day];
+
     // Performance is after today
-    if (today < dayIndexMap[day]) return false;
+    if (today < perfDayIndex) return false;
 
     // Performance is before today
-    if (today > dayIndexMap[day]) return true;
+    if (today > perfDayIndex) return true;
 
     // Performance is today
-    if (today === dayIndexMap[day]) {
-      const endInt = parseInt(end, 10);
-      const nowStamp = parseInt(`${now.getHours()}${now.getMinutes().toString().padStart(2, '0')}`, 10);
-      console.log('--')
-      console.log(artist)
-      console.log('endInt', endInt)
-      console.log('nowStamp', nowStamp)
-      if (endInt < 500) { // post midnight performance
-        if (nowStamp < 500) { // and the actual time is post midnight
-          if (nowStamp > endInt) return true; //safe to compare, event is over
-          else return false; // or not over
+    if (today === perfDayIndex) {
+      if (endInt < 500) {
+        // ends post-midnight
+        if (now.getHours() < 5) {
+          // still before 5am
+          return nowStamp > endInt;
+        } else {
+          // not past midnight yet, event hasn’t happened
+          return false;
         }
-        else return false; // not post midnight yet, so hasnt finished
       }
-      if (nowStamp < 500) {
-        return true; // past midnight so we finished
+
+      if (now.getHours() < 5) {
+        // it's a new calendar day, but still festival previous night
+        return true; // pre-midnight event definitely over
       }
-      if (nowStamp > endInt) return true; // pre-midnight check  
-      
+
+      return nowStamp > endInt;
     }
 
     return false;

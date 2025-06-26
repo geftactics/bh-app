@@ -73,7 +73,26 @@ export default function NowNextScreen() {
     return () => clearInterval(interval);
   }, []);
 
+
+    const getFestivalDayBounds = (now: Date) => {
+    const start = new Date(now);
+    const end = new Date(now);
+
+    if (now.getHours() < 5) {
+      // Before 5am → still part of previous festival day
+      start.setDate(start.getDate() - 1);
+    }
+
+    // Set bounds of current festival day
+    start.setHours(5, 0, 0, 0); // 05:00 today
+    end.setTime(start.getTime() + 24 * 60 * 60 * 1000); // +24h → 04:59 next day
+
+    return { start, end };
+  };
+
   const getNowAndNext = (slug: string) => {
+    const { start: dayStart, end: dayEnd } = getFestivalDayBounds(now);
+
     const events = lineup
       .filter((e) => e.venue === slug)
       .map((e) => ({
@@ -81,6 +100,7 @@ export default function NowNextScreen() {
         startDate: parsePerformanceDate(e.day, e.start),
         endDate: parsePerformanceDate(e.day, e.end),
       }))
+      .filter((e) => e.startDate >= dayStart && e.startDate < dayEnd) // only today's events
       .sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
 
     const current = events.find((e) => now >= e.startDate && now <= e.endDate);
@@ -88,6 +108,8 @@ export default function NowNextScreen() {
 
     return { current, next };
   };
+
+
 
   return (
     <ParallaxScrollView
