@@ -1,11 +1,10 @@
+import NoPerformanceCard from '@/components/NoPerformanceCard';
+import ParallaxScrollView from '@/components/ParallaxScrollView';
+import PerformanceCard from '@/components/PerformanceCard';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import { useCallback, useEffect, useState } from 'react';
 import { ActivityIndicator, Image, StyleSheet, Text, View } from 'react-native';
-
-import NoPerformanceCard from '@/components/NoPerformanceCard';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import PerformanceCard from '@/components/PerformanceCard';
 
 function parsePerformanceDate(day: string, time: string): Date {
   const [hh, mm] = [parseInt(time.slice(0, 2)), parseInt(time.slice(2))];
@@ -49,19 +48,18 @@ export default function NowNextScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      const load = async () => {
+      if (!stages.length || !lineup.length) {
         setLoading(true);
-        const [s, l] = await Promise.all([
+        Promise.all([
           AsyncStorage.getItem('stages'),
           AsyncStorage.getItem('lineup'),
-        ]);
-        setStages(s ? JSON.parse(s) : []);
-        setLineup(l ? JSON.parse(l) : []);
-        setLoading(false);
-      };
-
-      load();
-    }, [])
+        ]).then(([s, l]) => {
+          setStages(s ? JSON.parse(s) : []);
+          setLineup(l ? JSON.parse(l) : []);
+          setLoading(false);
+        });
+      }
+    }, [stages.length, lineup.length])
   );
 
   // Refresh the current time every minute

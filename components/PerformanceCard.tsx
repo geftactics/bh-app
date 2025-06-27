@@ -68,7 +68,6 @@ export default function PerformanceCard({
       }
 
       await AsyncStorage.setItem('favourites', JSON.stringify(favs));
-      console.log(favs);
 
     } catch (error) {
       console.error('Error toggling favourite:', error);
