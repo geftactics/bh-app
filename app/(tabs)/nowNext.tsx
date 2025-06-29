@@ -48,19 +48,29 @@ export default function NowNextScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      if (!stages.length || !lineup.length) {
-        setLoading(true);
-        Promise.all([
+      let isActive = true;
+
+      const loadData = async () => {
+        const [s, l] = await Promise.all([
           AsyncStorage.getItem('stages'),
           AsyncStorage.getItem('lineup'),
-        ]).then(([s, l]) => {
+        ]);
+
+        if (isActive) {
           setStages(s ? JSON.parse(s) : []);
           setLineup(l ? JSON.parse(l) : []);
           setLoading(false);
-        });
-      }
-    }, [stages.length, lineup.length])
+        }
+      };
+
+      loadData();
+
+      return () => {
+        isActive = false;
+      };
+    }, []) // <- only run once, like artists/index
   );
+
 
   // Refresh the current time every minute
   useEffect(() => {
