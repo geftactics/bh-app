@@ -82,8 +82,8 @@ export default function PerformanceCard({
   };
 
   function hasEventFinished() {
-    const festivalStart = new Date('2025-06-26');
-    const festivalEnd = new Date('2025-06-29T23:59:59');
+    const festivalStart = new Date('2025-07-17');
+    const festivalEnd = new Date('2025-07-20T23:59:59');
 
     const now = new Date();
 
