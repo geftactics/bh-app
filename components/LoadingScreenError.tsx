@@ -1,17 +1,12 @@
 import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function LoadingScreenError({ onRetry }) {
-
-  const colorScheme = useColorScheme();
-  const theme = Colors[colorScheme];
-
   return (
-    <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <Text style={[styles.text, { color: theme.text }]}>We couldn't connect and download the data!</Text>
-      <TouchableOpacity style={[styles.button, { backgroundColor: theme.tint }]} onPress={onRetry}>
-        <Text style={[styles.buttonText, { color: theme.buttonText }]}>Try Again</Text>
+    <View style={[styles.container, { backgroundColor: Colors.background }]}>
+      <Text style={[styles.text, { color: Colors.text }]}>We couldn't connect and download the data!</Text>
+      <TouchableOpacity style={[styles.button, { backgroundColor: Colors.tint }]} onPress={onRetry}>
+        <Text style={[styles.buttonText, { color: Colors.buttonText }]}>Try Again</Text>
       </TouchableOpacity>
     </View>
   );

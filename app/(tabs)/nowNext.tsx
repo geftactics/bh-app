@@ -1,6 +1,7 @@
 import NoPerformanceCard from '@/components/NoPerformanceCard';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import PerformanceCard from '@/components/PerformanceCard';
+import { Colors } from '@/constants/Colors';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import { useCallback, useEffect, useState } from 'react';
@@ -121,7 +122,7 @@ export default function NowNextScreen() {
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#353636', dark: '#353636' }}
+      headerBackgroundColor={Colors.headerBackground}
       headerImage={
         <Image
           source={require('@/assets/images/header-logo.png')}
@@ -130,7 +131,7 @@ export default function NowNextScreen() {
       }
     >
       {loading ? (
-        <ActivityIndicator size="large" color="#E30083" />
+        <ActivityIndicator size="large" color={Colors.tint} />
       ) : (
         stages.map((stage) => {
           const { current, next } = getNowAndNext(stage.slug);
@@ -184,7 +185,7 @@ export default function NowNextScreen() {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
+    color: Colors.gray,
     bottom: -90,
     left: -35,
     position: 'absolute',
@@ -207,13 +208,13 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     marginBottom: 5,
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomColor: Colors.lightGray,
   },
   stageTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 4,
-    color: '#E30083',
+    color: Colors.tint,
   },
   topImage: {
     height: 178,

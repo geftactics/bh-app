@@ -1,5 +1,5 @@
 import React, { forwardRef, useImperativeHandle, type PropsWithChildren, type ReactElement } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -7,15 +7,16 @@ import Animated, {
   useScrollViewOffset,
 } from 'react-native-reanimated';
 
-import { ThemedView } from '@/components/ThemedView';
+
+import { Colors } from '@/constants/Colors';
 import { useBottomTabOverflow } from '@/components/ui/TabBarBackground';
-import { useColorScheme } from '@/hooks/useColorScheme';
+
 
 const HEADER_HEIGHT = 150;
 
 type Props = PropsWithChildren<{
   headerImage: ReactElement;
-  headerBackgroundColor: { dark: string; light: string };
+  headerBackgroundColor: string;
 }>;
 
 // The ref will expose a scrollTo method
@@ -28,7 +29,7 @@ const ParallaxScrollView = forwardRef<ParallaxScrollViewRef, Props>(({
   headerImage,
   headerBackgroundColor,
 }, ref) => {
-  const colorScheme = useColorScheme() ?? 'light';
+
   const scrollRef = useAnimatedRef<Animated.ScrollView>();
   const scrollOffset = useScrollViewOffset(scrollRef);
   const bottom = useBottomTabOverflow();
@@ -57,7 +58,7 @@ const ParallaxScrollView = forwardRef<ParallaxScrollViewRef, Props>(({
   }));
 
   return (
-    <ThemedView style={styles.container}>
+    <View style={[styles.container, { backgroundColor: Colors.background }]}>
       <Animated.ScrollView
         ref={scrollRef}
         scrollEventThrottle={16}
@@ -66,14 +67,14 @@ const ParallaxScrollView = forwardRef<ParallaxScrollViewRef, Props>(({
         <Animated.View
           style={[
             styles.header,
-            { backgroundColor: headerBackgroundColor[colorScheme] },
+            { backgroundColor: headerBackgroundColor },
             headerAnimatedStyle,
           ]}>
           {headerImage}
         </Animated.View>
-        <ThemedView style={styles.content}>{children}</ThemedView>
+        <View style={[styles.content, { backgroundColor: Colors.background }]}>{children}</View>
       </Animated.ScrollView>
-    </ThemedView>
+    </View>
   );
 });
 

@@ -1,6 +1,5 @@
 import PerformanceCard from '@/components/PerformanceCard';
 import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Stack, useLocalSearchParams, useNavigation } from 'expo-router';
@@ -10,9 +9,7 @@ import { ActivityIndicator, Image, Platform, ScrollView, StyleSheet, Text, Touch
 const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 export default function ArtistDetail() {
-  const colorScheme = useColorScheme();
   const navigation = useNavigation();
-  const theme = Colors[colorScheme];
   const { slug } = useLocalSearchParams<{ slug: string }>();
 
   const [entries, setEntries] = useState<any[]>([]);
@@ -26,9 +23,9 @@ export default function ArtistDetail() {
           onPress={() => navigation.goBack()}
           style={{ flexDirection: 'row', alignItems: 'center', marginLeft: Platform.OS === 'ios' ? -10 : 0 }}
         >
-          <Ionicons name="chevron-back" size={24} color={Platform.OS === 'ios' ? '#fff' : '#fff'} />
+          <Ionicons name="chevron-back" size={24} color={Colors.white} />
           {Platform.OS === 'ios' && (
-            <Text style={{ color: '#fff', fontSize: 17, marginLeft: 2 }}>Back</Text>
+            <Text style={{ color: Colors.white, fontSize: 17, marginLeft: 2 }}>Back</Text>
           )}
         </TouchableOpacity>
       ),
@@ -61,24 +58,24 @@ export default function ArtistDetail() {
         options={{
           title: '',
           headerBackTitle: 'Back',
-          headerStyle: { backgroundColor: 'black' },
-          headerTintColor: 'white',
+          headerStyle: { backgroundColor: Colors.black },
+          headerTintColor: Colors.white,
         }}
       />
 
       {loading ? (
-        <View style={[styles.container, { backgroundColor: theme.background }]}>
-          <ActivityIndicator size="large" color="#E30083" />
+        <View style={[styles.container, { backgroundColor: Colors.background }]}>
+          <ActivityIndicator size="large" color={Colors.tint} />
         </View>
       ) : !artist ? (
-        <View style={[styles.container, { backgroundColor: theme.background }]}>
+        <View style={[styles.container, { backgroundColor: Colors.background }]}>
           <Text style={styles.error}>Artist not found</Text>
         </View>
       ) : (
         <ScrollView
           contentContainerStyle={[
             styles.container,
-            { backgroundColor: theme.background, paddingBottom: 80 },
+            { backgroundColor: Colors.background, paddingBottom: 80 },
           ]}
         >
           <View style={styles.topRow}>
@@ -146,7 +143,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: '50%',
     aspectRatio: 1,
-    backgroundColor: '#eee',
+    backgroundColor: Colors.cardBackground,
     overflow: 'hidden',
   },
   image: {
@@ -156,14 +153,14 @@ const styles = StyleSheet.create({
   pinkBox: {
     width: '50%',
     aspectRatio: 1,
-    backgroundColor: '#E30083',
+    backgroundColor: Colors.tint,
     justifyContent: 'center',
     alignItems: 'center',
   },
   artistName: {
     fontWeight: 'bold',
     fontSize: 29,
-    color: 'black',
+    color: Colors.black,
     textAlign: 'center',
     paddingHorizontal: 10,
   },

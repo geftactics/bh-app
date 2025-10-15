@@ -1,3 +1,4 @@
+import { Colors } from '@/constants/Colors';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 type Props = {
@@ -16,13 +17,13 @@ export default function NoPerformanceCard({ description }: Props) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#eee',
+    backgroundColor: Colors.cardBackground,
     marginHorizontal: 5,
     marginVertical: 8,
     borderRadius: 12,
     padding: 16,
     minHeight: 75,
-    shadowColor: '#000',
+    shadowColor: Colors.shadow,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: 'black',
+    color: Colors.black,
     flex: 1,
     paddingRight: 10,
   },

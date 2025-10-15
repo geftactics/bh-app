@@ -1,5 +1,6 @@
 import ArtistCard from '@/components/ArtistCard';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
+import { Colors } from '@/constants/Colors';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import { useNavigation } from 'expo-router';
@@ -45,7 +46,7 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       ref={scrollRef}
-      headerBackgroundColor={{ light: '#353636', dark: '#353636' }}
+      headerBackgroundColor={Colors.headerBackground}
       headerImage={
         <Image
           source={require('@/assets/images/header-logo.png')}
@@ -55,7 +56,7 @@ export default function TabTwoScreen() {
     >
       {loading ? (
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#E30083" />
+          <ActivityIndicator size="large" color={Colors.tint} />
         </View>
       ) : (
         uniqueArtists.map((artist) => {
@@ -81,7 +82,7 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
+    color: Colors.gray,
     bottom: -90,
     left: -35,
     position: 'absolute',
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
   },
   loadingContainer: {
   flex: 1,
-  backgroundColor: '#FFE200',
+  backgroundColor: Colors.background,
   justifyContent: 'center',
   alignItems: 'center',
   paddingTop: 100,
@@ -101,7 +102,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 10,
     fontStyle: 'italic',
-    color: '#333',
+    color: Colors.textSecondary,
   },
   topImage: {
     height: 178,

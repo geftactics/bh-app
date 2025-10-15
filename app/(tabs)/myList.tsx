@@ -1,13 +1,14 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import { useCallback, useState } from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 
 import lineup from '@/assets/data/lineup.json';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
+import { Colors } from '@/constants/Colors';
 import PerformanceCard from '@/components/PerformanceCard';
 import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+
 
 export default function TabTwoScreen() {
   const [favourites, setFavourites] = useState<string[]>([]);
@@ -58,7 +59,7 @@ export default function TabTwoScreen() {
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#353636', dark: '#353636' }}
+      headerBackgroundColor={Colors.headerBackground}
       headerImage={
         <Image
           source={require('@/assets/images/header-logo.png')}
@@ -66,23 +67,23 @@ export default function TabTwoScreen() {
         />
       }
     >
-      <ThemedView style={styles.titleContainer}>
+      <View style={[styles.titleContainer, { backgroundColor: Colors.background }]}>
         <ThemedText type="title">My List</ThemedText>
-      </ThemedView>
+      </View>
 
       {performances.length === 0 ? (
-        <ThemedView style={styles.emptyContainer}>
+        <View style={[styles.emptyContainer, { backgroundColor: Colors.background }]}>
           <ThemedText type="default" style={styles.emptyText}>Oh! So empty!</ThemedText>
           <ThemedText type="default" style={styles.emptyText}> </ThemedText>
           <ThemedText type="default" style={styles.emptyText}>
             Click the 🖤 next to the things you like to add them to your list!
           </ThemedText>
-        </ThemedView>
+        </View>
       ) : (
         performances.map((performance) => (
-          <ThemedView
+          <View
             key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-            style={{ marginHorizontal: -15, marginVertical: -5 }}
+            style={{ marginHorizontal: -15, marginVertical: -5, backgroundColor: Colors.background }}
           >
             <PerformanceCard
               uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
@@ -94,7 +95,7 @@ export default function TabTwoScreen() {
               description={performance.description}
               venue={performance.venue}
             />
-          </ThemedView>
+          </View>
         ))
       )}
     </ParallaxScrollView>
@@ -106,7 +107,7 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
+    color: Colors.gray,
     bottom: -90,
     left: -35,
     position: 'absolute',
@@ -122,7 +123,7 @@ const styles = StyleSheet.create({
   },
   emptyText: {
     fontSize: 16,
-    color: '#666',
+    color: Colors.darkGray,
     fontStyle: 'italic',
     textAlign: 'center',
   },

@@ -1,5 +1,6 @@
 // components/StageCard.tsx
 
+import { Colors } from '@/constants/Colors';
 import { logoMap, photoMap } from '@/constants/StageImages';
 import { useRouter } from 'expo-router';
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     resizeMode: 'contain',
-    shadowColor: '#000',
+    shadowColor: Colors.shadow,
     shadowOffset: { width: 5, height: 2 },
     shadowOpacity: 1,
     shadowRadius: 3,
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   title: {
-    color: 'white',
+    color: Colors.white,
     fontWeight: '600',
     fontSize: 16,
   },

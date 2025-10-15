@@ -1,3 +1,4 @@
+import { Colors } from '@/constants/Colors';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
@@ -45,7 +46,7 @@ export default function ArtistCard({
 
         {/* Right: Arrow Icon */}
         <View style={styles.iconContainer}>
-          <MaterialIcons name="arrow-forward-ios" size={20} color="#888" />
+          <MaterialIcons name="arrow-forward-ios" size={20} color={Colors.arrow} />
         </View>
       </View>
 
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 12,
     overflow: 'hidden',
-    backgroundColor: '#eee',
+    backgroundColor: Colors.cardBackground,
     marginRight: 20,
   },
   image: {
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
   },
   genreText: {
     marginTop: 5,
-    color: 'grey',
+    color: Colors.gray,
     fontSize: 12,
     fontWeight: '600',
   },
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
   },
   divider: {
     height: 1,
-    backgroundColor: '#ccc',
+    backgroundColor: Colors.lightGray,
     marginHorizontal: 10,
     marginTop: 5,
   },

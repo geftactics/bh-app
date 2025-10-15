@@ -1,5 +1,3 @@
-import { useColorScheme } from '@/hooks/useColorScheme';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useRef, useState } from 'react';
@@ -12,7 +10,6 @@ import { fetchData } from '../lib/fetchData';
 export default function RootLayout() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const colorScheme = useColorScheme();
   const appState = useRef(AppState.currentState);
 
   async function loadSchedule() {
@@ -55,13 +52,13 @@ export default function RootLayout() {
   if (loading) return <LoadingScreen />;
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="artists/[slug]" options={{ presentation: 'card', headerShown: true }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
-    </ThemeProvider>
+    </>
   );
 }

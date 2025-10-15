@@ -1,7 +1,6 @@
 import PerformanceCard from '@/components/PerformanceCard';
 import { Colors } from '@/constants/Colors';
 import { logoMap, photoMap } from '@/constants/StageImages';
-import { useColorScheme } from '@/hooks/useColorScheme';
 import { getCollapsedDaysForToday } from '@/lib/utils';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
@@ -47,8 +46,6 @@ function timeSort(a: any, b: any) {
 }
 
 export default function StageDetail() {
-  const colorScheme = useColorScheme();
-  const theme = Colors[colorScheme];
   const { slug } = useLocalSearchParams<{ slug: string }>();
 
   const [stages, setStages] = useState<any[]>([]);
@@ -112,21 +109,21 @@ export default function StageDetail() {
         options={{
           title: stage?.name || 'Stage',
           headerBackTitle: 'Back',
-          headerStyle: { backgroundColor: 'black' },
-          headerTintColor: 'white',
+          headerStyle: { backgroundColor: Colors.black },
+          headerTintColor: Colors.white,
         }}
       />
 
       {loading ? (
-        <View style={[styles.container, { backgroundColor: theme.background }]}> 
-          <ActivityIndicator size="large" color="#E30083" />
+        <View style={[styles.container, { backgroundColor: Colors.background }]}> 
+          <ActivityIndicator size="large" color={Colors.tint} />
         </View>
       ) : !stage ? (
-        <View style={[styles.container, { backgroundColor: theme.background }]}> 
+        <View style={[styles.container, { backgroundColor: Colors.background }]}> 
           <Text style={styles.error}>Stage not found</Text>
         </View>
       ) : (
-        <ScrollView contentContainerStyle={[styles.container, { backgroundColor: theme.background, paddingBottom: 100 }]}> 
+        <ScrollView contentContainerStyle={[styles.container, { backgroundColor: Colors.background, paddingBottom: 100 }]}> 
           <View style={styles.card}>
             <Image source={photoMap[slug]} style={styles.image} />
             <Image source={logoMap[slug]} style={styles.logoOverlay} />
@@ -137,7 +134,7 @@ export default function StageDetail() {
             performancesByDay[day].length > 0 && (
               <View key={day} style={{ marginBottom: 20 }}>
                 <Pressable onPress={() => toggleCollapse(day)}>
-                  <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#E30083', marginTop: 20 }}>
+                  <Text style={{ fontSize: 20, fontWeight: 'bold', color: Colors.tint, marginTop: 20 }}>
                     {collapsed[day] ? '▶' : '▼'} {day}
                   </Text>
                 </Pressable>
@@ -187,7 +184,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     resizeMode: 'contain',
-    shadowColor: '#000',
+    shadowColor: Colors.shadow,
     shadowOffset: { width: 5, height: 2 },
     shadowOpacity: 1,
     shadowRadius: 3,

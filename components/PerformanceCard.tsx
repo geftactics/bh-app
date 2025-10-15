@@ -1,3 +1,4 @@
+import { Colors } from '@/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
@@ -171,7 +172,7 @@ export default function PerformanceCard({
           <Ionicons
             name={isFavourite ? 'heart' : 'heart-outline'}
             size={24}
-            color={isFavourite ? '#E30083' : 'gray'}
+            color={isFavourite ? Colors.tint : Colors.gray}
           />
         </Pressable>
       </View>
@@ -182,13 +183,13 @@ export default function PerformanceCard({
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#eee',
+    backgroundColor: Colors.cardBackground,
     marginHorizontal: 5,
     marginVertical: 8,
     borderRadius: 12,
     minHeight: 75,
     padding: 16,
-    shadowColor: '#000',
+    shadowColor: Colors.shadow,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
@@ -203,12 +204,12 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: 'black',
+    color: Colors.black,
     flex: 1,
     paddingRight: 10,
   },
   description: {
     fontSize: 14,
-    color: 'black',
+    color: Colors.black,
   },
 });

@@ -1,5 +1,6 @@
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import StageCard from '@/components/StageCard';
+import { Colors } from '@/constants/Colors';
 import { photoMap } from '@/constants/StageImages';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Asset } from 'expo-asset';
@@ -39,7 +40,7 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       ref={scrollRef}
-      headerBackgroundColor={{ light: '#353636', dark: '#353636' }}
+      headerBackgroundColor={Colors.headerBackground}
       headerImage={
           <Image
             source={require('@/assets/images/header-logo.png')}
@@ -56,7 +57,7 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
+    color: Colors.gray,
     bottom: -90,
     left: -35,
     position: 'absolute',
