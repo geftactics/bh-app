@@ -1,8 +1,9 @@
 import { Colors } from '@/constants/Colors';
+import { FESTIVAL_START_DATE, FESTIVAL_END_DATE } from '@/constants/Festival';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 type Props = {
@@ -37,21 +38,33 @@ export default function PerformanceCard({
   useEffect(() => {
     AsyncStorage.getItem('stages').then((data) => {
       if (data) {
-        const stages = JSON.parse(data);
-        const match = stages.find((stage: any) => stage.slug === venue);
-        if (match) {
-          setFormattedVenue(match.name);
+        try {
+          const stages = JSON.parse(data);
+          const match = stages.find((stage: any) => stage.slug === venue);
+          if (match) {
+            setFormattedVenue(match.name);
+          }
+        } catch (error) {
+          console.warn('Failed to parse stages data:', error);
         }
       }
+    }).catch(error => {
+      console.warn('Failed to load stages:', error);
     });
   }, [venue]);
 
   useEffect(() => {
     AsyncStorage.getItem('favourites').then((data) => {
       if (data) {
-        const favs = JSON.parse(data);
-        setIsFavourite(favs.includes(uid));
+        try {
+          const favs = JSON.parse(data);
+          setIsFavourite(favs.includes(uid));
+        } catch (error) {
+          console.warn('Failed to parse favourites data:', error);
+        }
       }
+    }).catch(error => {
+      console.warn('Failed to load favourites:', error);
     });
   }, [uid]);
 
@@ -83,8 +96,8 @@ export default function PerformanceCard({
   };
 
   function hasEventFinished() {
-    const festivalStart = new Date('2025-07-17');
-    const festivalEnd = new Date('2025-07-20T23:59:59');
+    const festivalStart = new Date(FESTIVAL_START_DATE);
+    const festivalEnd = new Date(`${FESTIVAL_END_DATE}T23:59:59`);
 
     const now = new Date();
 
@@ -157,7 +170,7 @@ export default function PerformanceCard({
 
 
 
-  const fadedOut = hasEventFinished();
+  const fadedOut = useMemo(() => hasEventFinished(), [day, end]);
 
   return (
     <Pressable onPress={handleCardPress} style={[styles.card, fadedOut && { opacity: 0.6 }]}>

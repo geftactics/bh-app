@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 
 import lineup from '@/assets/data/lineup.json';
@@ -10,52 +10,51 @@ import PerformanceCard from '@/components/PerformanceCard';
 import { ThemedText } from '@/components/ThemedText';
 
 
-export default function TabTwoScreen() {
+export default function FavouritesScreen() {
   const [favourites, setFavourites] = useState<string[]>([]);
-  const [performances, setPerformances] = useState<any[]>([]);
-
   useFocusEffect(
     useCallback(() => {
       const loadFavourites = async () => {
-        const data = await AsyncStorage.getItem('favourites');
-        if (data) setFavourites(JSON.parse(data));
+        try {
+          const data = await AsyncStorage.getItem('favourites');
+          if (data) setFavourites(JSON.parse(data));
+        } catch (error) {
+          console.warn('Failed to load favourites:', error);
+        }
       };
       loadFavourites();
     }, [])
   );
 
-  useFocusEffect(
-    useCallback(() => {
-      if (favourites.length === 0) return;
-      const filtered = lineup.filter((perf) => {
-        const uid = `${perf.day}-${perf.venue}-${perf.start}-${perf.artist}`
-          .replace(/[^a-zA-Z0-9]/g, '-')
-          .toLowerCase();
-        return favourites.includes(uid);
-      });
+  const performances = useMemo(() => {
+    if (favourites.length === 0) return [];
+    
+    const filtered = lineup.filter((perf) => {
+      const uid = `${perf.day}-${perf.venue}-${perf.start}-${perf.artist}`
+        .replace(/[^a-zA-Z0-9]/g, '-')
+        .toLowerCase();
+      return favourites.includes(uid);
+    });
 
-      const getSortableDayIndex = (day: string, time: string): number => {
-        const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
-        let index = dayOrder.indexOf(day);
+    const getSortableDayIndex = (day: string, time: string): number => {
+      const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
+      let index = dayOrder.indexOf(day);
 
-        // Post-midnight performances (00:00–04:59) should be sorted as next day
-        if (/^0[0-4][0-9]{2}$/.test(time) || time === '0500') {
-          index += 1;
-        }
+      // Post-midnight performances (00:00–04:59) should be sorted as next day
+      if (/^0[0-4][0-9]{2}$/.test(time) || time === '0500') {
+        index += 1;
+      }
 
-        return index;
-      };
+      return index;
+    };
 
-      const sorted = filtered.sort((a, b) => {
-        const dayA = getSortableDayIndex(a.day, a.start);
-        const dayB = getSortableDayIndex(b.day, b.start);
-        if (dayA !== dayB) return dayA - dayB;
-        return parseInt(a.start) - parseInt(b.start);
-      });
-
-      setPerformances(sorted);
-    }, [favourites])
-  );
+    return filtered.sort((a, b) => {
+      const dayA = getSortableDayIndex(a.day, a.start);
+      const dayB = getSortableDayIndex(b.day, b.start);
+      if (dayA !== dayB) return dayA - dayB;
+      return parseInt(a.start) - parseInt(b.start);
+    });
+  }, [favourites]);
 
   return (
     <ParallaxScrollView

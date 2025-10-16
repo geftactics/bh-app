@@ -5,20 +5,23 @@ import { Platform } from 'react-native';
 
 type Props = Omit<ComponentProps<typeof Link>, 'href'> & { href: Href & string };
 
+/**
+ * Link component that opens external URLs in an in-app browser on native platforms
+ */
 export function ExternalLink({ href, ...rest }: Props) {
+  const handlePress = async (event: any) => {
+    if (Platform.OS !== 'web') {
+      event.preventDefault();
+      await openBrowserAsync(href);
+    }
+  };
+
   return (
     <Link
       target="_blank"
       {...rest}
       href={href}
-      onPress={async (event) => {
-        if (Platform.OS !== 'web') {
-          // Prevent the default behavior of linking to the default browser on native.
-          event.preventDefault();
-          // Open the link in an in-app browser.
-          await openBrowserAsync(href);
-        }
-      }}
+      onPress={handlePress}
     />
   );
 }

@@ -7,10 +7,8 @@ import Animated, {
   useScrollViewOffset,
 } from 'react-native-reanimated';
 
-
 import { Colors } from '@/constants/Colors';
 import { useBottomTabOverflow } from '@/components/ui/TabBarBackground';
-
 
 const HEADER_HEIGHT = 150;
 
@@ -19,17 +17,18 @@ type Props = PropsWithChildren<{
   headerBackgroundColor: string;
 }>;
 
-// The ref will expose a scrollTo method
 export interface ParallaxScrollViewRef {
   scrollTo: (params: { y: number; animated?: boolean }) => void;
 }
 
+/**
+ * Parallax scroll view with animated header that scales and translates on scroll
+ */
 const ParallaxScrollView = forwardRef<ParallaxScrollViewRef, Props>(({
   children,
   headerImage,
   headerBackgroundColor,
 }, ref) => {
-
   const scrollRef = useAnimatedRef<Animated.ScrollView>();
   const scrollOffset = useScrollViewOffset(scrollRef);
   const bottom = useBottomTabOverflow();
@@ -49,11 +48,9 @@ const ParallaxScrollView = forwardRef<ParallaxScrollViewRef, Props>(({
     ],
   }));
 
-  // Expose scrollTo method to parent via ref
   useImperativeHandle(ref, () => ({
     scrollTo: ({ y, animated = true }) => {
-      // @ts-ignore
-      scrollRef.current?.scrollTo({ y, animated });
+      (scrollRef.current as any)?.scrollTo({ y, animated });
     },
   }));
 
@@ -63,16 +60,20 @@ const ParallaxScrollView = forwardRef<ParallaxScrollViewRef, Props>(({
         ref={scrollRef}
         scrollEventThrottle={16}
         scrollIndicatorInsets={{ bottom }}
-        contentContainerStyle={{ paddingBottom: bottom }}>
+        contentContainerStyle={{ paddingBottom: bottom }}
+      >
         <Animated.View
           style={[
             styles.header,
             { backgroundColor: headerBackgroundColor },
             headerAnimatedStyle,
-          ]}>
+          ]}
+        >
           {headerImage}
         </Animated.View>
-        <View style={[styles.content, { backgroundColor: Colors.background }]}>{children}</View>
+        <View style={[styles.content, { backgroundColor: Colors.background }]}>
+          {children}
+        </View>
       </Animated.ScrollView>
     </View>
   );

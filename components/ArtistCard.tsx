@@ -29,7 +29,7 @@ export default function ArtistCard({
           <Image
             source={
               error || !image
-                ? require('../assets/images/placeholder.png') 
+                ? require('@/assets/images/placeholder.png') 
                 : { uri: image }
             }
             style={styles.image}

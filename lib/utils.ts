@@ -1,16 +1,29 @@
+/**
+ * Returns array of festival days that should be collapsed by default
+ * based on the current day of the week
+ * @returns Array of day names to collapse
+ */
 export function getCollapsedDaysForToday(): string[] {
-  const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+  const today = new Date().getDay();
+
+  const DAYS = {
+    THURSDAY: 4,
+    FRIDAY: 5,
+    SATURDAY: 6,
+    SUNDAY: 0,
+    MONDAY: 1,
+  } as const;
 
   switch (today) {
-    case 5: // Friday
+    case DAYS.FRIDAY:
       return ['Thursday'];
-    case 6: // Saturday
+    case DAYS.SATURDAY:
       return ['Thursday', 'Friday'];
-    case 0: // Sunday
+    case DAYS.SUNDAY:
       return ['Thursday', 'Friday', 'Saturday'];
-    case 1: // Monday
+    case DAYS.MONDAY:
       return ['Thursday', 'Friday', 'Saturday', 'Sunday'];
-    default: // Tuesday, Wednesday, Thursday
+    default:
       return [];
   }
 }

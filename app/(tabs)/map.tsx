@@ -1,63 +1,70 @@
 import * as Location from 'expo-location';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';
 import MapView, { Overlay } from 'react-native-maps';
 
 export default function MapScreen() {
 
   useEffect(() => {
-  (async () => {
-    const { status } = await Location.requestForegroundPermissionsAsync();
-    if (status !== 'granted') {
-      console.warn('Permission to access location was denied');
-      return;
-    }
-    const location = await Location.getCurrentPositionAsync({});
-    console.log('User location:', location.coords);
-  })();
-}, []);
+    (async () => {
+      try {
+        const { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+          console.warn('Permission to access location was denied');
+          return;
+        }
+        const location = await Location.getCurrentPositionAsync({});
+        console.log('User location:', location.coords);
+      } catch (error) {
+        console.warn('Failed to get location:', error);
+      }
+    })();
+  }, []);
 
-  const LAT_MIN = 53.920;
-  const LAT_MAX = 53.925;
-  const LNG_MIN = -2.322;
-  const LNG_MAX = -2.314;
+  const MAP_BOUNDS = useMemo(() => ({
+    LAT_MIN: 53.920,
+    LAT_MAX: 53.925,
+    LNG_MIN: -2.322,
+    LNG_MAX: -2.314,
+  }), []);
+
+  const ANIMATION_DURATION = 300;
+  const ADJUSTMENT_DELAY = 400;
 
   const mapRef = useRef(null);
-  const isAdjusting = useRef(false); // 🔒 prevent re-entry
+  const isAdjusting = useRef(false);
 
-  const mapRegion = {
+  const mapRegion = useMemo(() => ({
     latitude: 53.9224,
     longitude: -2.3173,
     latitudeDelta: 0.002,
     longitudeDelta: 0.002,
+  }), []);
+
+  const clampCoordinate = (value: number, min: number, max: number) => {
+    return Math.max(min, Math.min(max, value));
   };
 
   const enforceBounds = (region) => {
-    if (isAdjusting.current) return;
+    if (isAdjusting.current || !mapRef.current) return;
 
     const { latitude, longitude } = region;
-    let newLat = latitude;
-    let newLng = longitude;
+    const newLat = clampCoordinate(latitude, MAP_BOUNDS.LAT_MIN, MAP_BOUNDS.LAT_MAX);
+    const newLng = clampCoordinate(longitude, MAP_BOUNDS.LNG_MIN, MAP_BOUNDS.LNG_MAX);
 
-    if (latitude < LAT_MIN) newLat = LAT_MIN;
-    if (latitude > LAT_MAX) newLat = LAT_MAX;
-    if (longitude < LNG_MIN) newLng = LNG_MIN;
-    if (longitude > LNG_MAX) newLng = LNG_MAX;
+    const needsAdjustment = newLat !== latitude || newLng !== longitude;
 
-    const clamped = (newLat !== latitude || newLng !== longitude);
-
-    if (clamped && mapRef.current) {
+    if (needsAdjustment) {
       isAdjusting.current = true;
       mapRef.current.animateToRegion({
         ...region,
         latitude: newLat,
         longitude: newLng,
-      }, 300);
+      }, ANIMATION_DURATION);
 
-      // Allow time for animateToRegion to settle before re-enabling
       setTimeout(() => {
         isAdjusting.current = false;
-      }, 400);
+      }, ADJUSTMENT_DELAY);
     }
   };
 

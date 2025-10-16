@@ -41,19 +41,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 3,
     elevation: 5,
-    padding: 10
-
-  },
-  titleBox: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    backgroundColor: 'rgba(0,0,0,0.4)',
     padding: 10,
-  },
-  title: {
-    color: Colors.white,
-    fontWeight: '600',
-    fontSize: 16,
   },
 });

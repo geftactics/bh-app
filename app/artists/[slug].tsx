@@ -6,8 +6,11 @@ import { Stack, useLocalSearchParams, useNavigation } from 'expo-router';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { ActivityIndicator, Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
+const DAY_ORDER = ['Thursday', 'Friday', 'Saturday', 'Sunday'] as const;
 
+/**
+ * Artist detail screen showing all performances for a specific artist
+ */
 export default function ArtistDetail() {
   const navigation = useNavigation();
   const { slug } = useLocalSearchParams<{ slug: string }>();
@@ -48,7 +51,7 @@ export default function ArtistDetail() {
   const artist = artistPerformances[0]; // use first performance for image/description etc
 
   const sortedPerformances = [...artistPerformances].sort((a, b) => {
-    const dayDiff = dayOrder.indexOf(a.day) - dayOrder.indexOf(b.day);
+    const dayDiff = DAY_ORDER.indexOf(a.day) - DAY_ORDER.indexOf(b.day);
     return dayDiff !== 0 ? dayDiff : parseInt(a.start) - parseInt(b.start);
   });
 
@@ -83,7 +86,7 @@ export default function ArtistDetail() {
               <Image
                 source={
                   error || !artist.image
-                    ? require('../../assets/images/placeholder.png')
+                    ? require('@/assets/images/placeholder.png')
                     : { uri: artist.image }
                 }
                 style={styles.image}
@@ -103,24 +106,30 @@ export default function ArtistDetail() {
             </View>
           )}
 
-          {sortedPerformances.map((performance) => (
-            <View 
-              style={[styles.descriptionContainer, { padding: 0 }]}
-              key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-            >
-            <PerformanceCard
-              noLink={true}
-              day={performance.day}
-              start={performance.start}
-              end={performance.end}
-              venue={performance.venue}
-              artist={performance.artist}
-              genre={performance.genre}
-              description={performance.description}
-              uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-            />
-            </View>
-          ))}
+          {sortedPerformances.map((performance) => {
+            const uid = `${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`
+              .replace(/[^a-zA-Z0-9]/g, '-')
+              .toLowerCase();
+            
+            return (
+              <View 
+                style={[styles.descriptionContainer, { padding: 0 }]}
+                key={uid}
+              >
+                <PerformanceCard
+                  noLink={true}
+                  day={performance.day}
+                  start={performance.start}
+                  end={performance.end}
+                  venue={performance.venue}
+                  artist={performance.artist}
+                  genre={performance.genre}
+                  description={performance.description}
+                  uid={uid}
+                />
+              </View>
+            );
+          })}
         </ScrollView>
       )}
     </>

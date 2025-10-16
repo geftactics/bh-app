@@ -4,10 +4,10 @@ import PerformanceCard from '@/components/PerformanceCard';
 import { Colors } from '@/constants/Colors';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ActivityIndicator, Image, StyleSheet, Text, View } from 'react-native';
 
-function parsePerformanceDate(day: string, time: string): Date {
+const parsePerformanceDate = useMemo(() => (day: string, time: string): Date => {
   const [hh, mm] = [parseInt(time.slice(0, 2)), parseInt(time.slice(2))];
 
   const dayOffset: Record<string, number> = {
@@ -39,7 +39,7 @@ function parsePerformanceDate(day: string, time: string): Date {
   }
 
   return performanceDate;
-}
+}, []);
 
 export default function NowNextScreen() {
   const [stages, setStages] = useState<any[]>([]);
@@ -52,15 +52,20 @@ export default function NowNextScreen() {
       let isActive = true;
 
       const loadData = async () => {
-        const [s, l] = await Promise.all([
-          AsyncStorage.getItem('stages'),
-          AsyncStorage.getItem('lineup'),
-        ]);
+        try {
+          const [s, l] = await Promise.all([
+            AsyncStorage.getItem('stages'),
+            AsyncStorage.getItem('lineup'),
+          ]);
 
-        if (isActive) {
-          setStages(s ? JSON.parse(s) : []);
-          setLineup(l ? JSON.parse(l) : []);
-          setLoading(false);
+          if (isActive) {
+            setStages(s ? JSON.parse(s) : []);
+            setLineup(l ? JSON.parse(l) : []);
+            setLoading(false);
+          }
+        } catch (error) {
+          console.warn('Failed to load data:', error);
+          if (isActive) setLoading(false);
         }
       };
 

@@ -21,12 +21,6 @@ export default function TabLayout() {
           },
           default: {},
         }),
-      }}
-      screenListeners={{
-        tabPress: (e) => {
-          console.log('tab pressed:', e.target);
-          // Here you could send an event via context or state to child screens
-        },
       }}>
       <Tabs.Screen
         name="index"
@@ -62,7 +56,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => (<MaterialIcons name="map" size={28} color={color} />)
         }}
       />
-        <Tabs.Screen
+      <Tabs.Screen
         name="myList"
         options={{
           title: 'My List',

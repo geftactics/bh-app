@@ -23,28 +23,28 @@ if (Platform.OS === 'android') {
   UIManager.setLayoutAnimationEnabledExperimental?.(true);
 }
 
-const dayOrder = ['Thursday', 'Friday', 'Saturday', 'Sunday'];
+const DAY_ORDER = ['Thursday', 'Friday', 'Saturday', 'Sunday'] as const;
 
-function isPast(day: string): boolean {
-  const now = new Date();
-  const dayMap: any = {
-    Thursday: 4,
-    Friday: 5,
-    Saturday: 6,
-    Sunday: 0,
-  };
-  return now.getDay() > dayMap[day] || (now.getDay() === dayMap[day] && now.getHours() >= 5);
+const DAY_MAP = {
+  Thursday: 4,
+  Friday: 5,
+  Saturday: 6,
+  Sunday: 0,
+} as const;
+
+function parseTime(timeString: string): number {
+  const hours = parseInt(timeString.slice(0, 2), 10);
+  const minutes = parseInt(timeString.slice(2), 10);
+  return hours < 5 ? hours + 24 + minutes / 60 : hours + minutes / 60;
 }
 
-function timeSort(a: any, b: any) {
-  const parse = (t: string) => {
-    const h = parseInt(t.slice(0, 2), 10);
-    const m = parseInt(t.slice(2), 10);
-    return h < 5 ? h + 24 + m / 60 : h + m / 60;
-  };
-  return parse(a.start) - parse(b.start);
+function timeSort(a: any, b: any): number {
+  return parseTime(a.start) - parseTime(b.start);
 }
 
+/**
+ * Stage detail screen showing performances for a specific stage
+ */
 export default function StageDetail() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
 
@@ -92,7 +92,7 @@ export default function StageDetail() {
   const stagePerformances = lineup.filter((e) => e.venue === slug);
 
   const performancesByDay: Record<string, any[]> = {};
-  dayOrder.forEach((day) => {
+  DAY_ORDER.forEach((day) => {
     performancesByDay[day] = stagePerformances
       .filter((p) => p.day === day)
       .sort(timeSort);
@@ -130,27 +130,33 @@ export default function StageDetail() {
           </View>
           <Text style={styles.description}>{stage.description}</Text>
 
-          {dayOrder.map((day) => (
+          {DAY_ORDER.map((day) => (
             performancesByDay[day].length > 0 && (
-              <View key={day} style={{ marginBottom: 20 }}>
+              <View key={day} style={styles.daySection}>
                 <Pressable onPress={() => toggleCollapse(day)}>
-                  <Text style={{ fontSize: 20, fontWeight: 'bold', color: Colors.tint, marginTop: 20 }}>
+                  <Text style={styles.dayHeader}>
                     {collapsed[day] ? '▶' : '▼'} {day}
                   </Text>
                 </Pressable>
                 {!collapsed[day] && (
-                  performancesByDay[day].map((performance) => (
-                    <PerformanceCard
-                      key={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-                      uid={`${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}
-                      day={performance.day}
-                      start={performance.start}
-                      end={performance.end}
-                      artist={performance.artist}
-                      genre={performance.genre}
-                      description={performance.description}
-                    />
-                  ))
+                  performancesByDay[day].map((performance) => {
+                    const uid = `${performance.day}-${performance.venue}-${performance.start}-${performance.artist}`
+                      .replace(/[^a-zA-Z0-9]/g, '-')
+                      .toLowerCase();
+                    
+                    return (
+                      <PerformanceCard
+                        key={uid}
+                        uid={uid}
+                        day={performance.day}
+                        start={performance.start}
+                        end={performance.end}
+                        artist={performance.artist}
+                        genre={performance.genre}
+                        description={performance.description}
+                      />
+                    );
+                  })
                 )}
               </View>
             )
@@ -199,7 +205,15 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 16,
-
+  },
+  daySection: {
+    marginBottom: 20,
+  },
+  dayHeader: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: Colors.tint,
+    marginTop: 20,
   },
   error: {
     color: 'red',

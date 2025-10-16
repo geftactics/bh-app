@@ -5,6 +5,9 @@ type Props = {
   description: string;
 };
 
+/**
+ * Card component displayed when no performances are available
+ */
 export default function NoPerformanceCard({ description }: Props) {
   return (
     <Pressable style={styles.card}>

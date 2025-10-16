@@ -3,24 +3,27 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { Colors } from '@/constants/Colors';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
-import { useNavigation } from 'expo-router';
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { ActivityIndicator, Image, StyleSheet, View } from 'react-native';
 
-export default function TabTwoScreen() {
+export default function ArtistsIndexScreen() {
 
   const [artists, setArtists] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollRef = useRef<{ scrollTo: (params: { y: number; animated?: boolean }) => void }>(null);
-  const navigation = useNavigation();
 
   useFocusEffect(
     useCallback(() => {
       let isActive = true;
       const loadData = async () => {
-        const json = await AsyncStorage.getItem('lineup');
-        if (json && isActive) {
-          setArtists(JSON.parse(json));
+        try {
+          const json = await AsyncStorage.getItem('lineup');
+          if (json && isActive) {
+            setArtists(JSON.parse(json));
+            setLoading(false);
+          }
+        } catch (error) {
+          console.warn('Failed to load artists:', error);
           setLoading(false);
         }
       };
@@ -33,15 +36,21 @@ export default function TabTwoScreen() {
     }, [])
   );
 
-  const uniqueArtists = Array.from(
-    new Map(artists.map((a) => [a.artist.toLowerCase(), a])).values()
-  );
-
-  uniqueArtists.sort((a, b) => {
-    const nameA = a.artist.replace(/^DJ\s+/i, '').toLowerCase();
-    const nameB = b.artist.replace(/^DJ\s+/i, '').toLowerCase();
-    return nameA.localeCompare(nameB);
-  });
+  const uniqueArtists = useMemo(() => {
+    const unique = Array.from(
+      new Map(artists.map((a) => [a.artist.toLowerCase(), a])).values()
+    );
+    
+    // Pre-compute sort keys for better performance
+    const withSortKeys = unique.map(artist => ({
+      ...artist,
+      sortKey: artist.artist.replace(/^DJ\s+/i, '').toLowerCase()
+    }));
+    
+    return withSortKeys
+      .sort((a, b) => a.sortKey.localeCompare(b.sortKey))
+      .map(({ sortKey, ...artist }) => artist); // Remove sort key from final result
+  }, [artists]);
 
   return (
     <ParallaxScrollView

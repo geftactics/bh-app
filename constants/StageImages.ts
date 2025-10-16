@@ -1,4 +1,4 @@
-export const photoMap = {
+export const photoMap: Record<string, any> = {
   'the-beatherder-stage': require('@/assets/images/stages/photo/the-beatherder-stage.jpg'),
   'toil-trees': require('@/assets/images/stages/photo/toil-trees.jpg'),
   'the-fortress': require('@/assets/images/stages/photo/the-fortress.jpg'),
@@ -17,7 +17,7 @@ export const photoMap = {
   'hotel-california': require('@/assets/images/stages/photo/hotel-california.jpg'),
 };
 
-export const logoMap = {
+export const logoMap: Record<string, any> = {
   'the-beatherder-stage': require('@/assets/images/stages/logo/the-beatherder-stage.png'),
   'toil-trees': require('@/assets/images/stages/logo/toil-trees.png'),
   'the-fortress': require('@/assets/images/stages/logo/the-fortress.png'),

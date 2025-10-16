@@ -4,30 +4,33 @@ import { Colors } from '@/constants/Colors';
 import { photoMap } from '@/constants/StageImages';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Asset } from 'expo-asset';
-import { useNavigation } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Image, StyleSheet } from 'react-native';
 
-export default function TabTwoScreen() {
+export default function StagesIndexScreen() {
   const [stages, setStages] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollRef = useRef<{ scrollTo: (params: { y: number; animated?: boolean }) => void }>(null);
-  const navigation = useNavigation();
 
   useEffect(() => {
     const loadStagesAndImages = async () => {
-      const json = await AsyncStorage.getItem('stages');
-      const stageList = json ? JSON.parse(json) : [];
+      try {
+        const json = await AsyncStorage.getItem('stages');
+        const stageList = json ? JSON.parse(json) : [];
 
-      const preloadPromises = stageList.map((stage: any) => {
-        const imageModule = photoMap[stage.slug]; 
-        return Asset.fromModule(imageModule).downloadAsync();
-      });
+        const preloadPromises = stageList.map((stage: any) => {
+          const imageModule = photoMap[stage.slug]; 
+          return Asset.fromModule(imageModule).downloadAsync();
+        });
 
-      await Promise.all(preloadPromises); 
+        await Promise.all(preloadPromises); 
 
-      setStages(stageList);
-      setLoading(false);
+        setStages(stageList);
+        setLoading(false);
+      } catch (error) {
+        console.warn('Failed to load stages:', error);
+        setLoading(false);
+      }
     };
 
     loadStagesAndImages();

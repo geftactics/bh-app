@@ -1,0 +1,2 @@
+export const FESTIVAL_START_DATE = '2025-10-16';
+export const FESTIVAL_END_DATE = '2025-10-19';
