@@ -7,7 +7,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ActivityIndicator, Image, StyleSheet, Text, View } from 'react-native';
 
-const parsePerformanceDate = useMemo(() => (day: string, time: string): Date => {
+function parsePerformanceDate(day: string, time: string): Date {
   const [hh, mm] = [parseInt(time.slice(0, 2)), parseInt(time.slice(2))];
 
   const dayOffset: Record<string, number> = {
@@ -39,7 +39,7 @@ const parsePerformanceDate = useMemo(() => (day: string, time: string): Date => 
   }
 
   return performanceDate;
-}, []);
+}
 
 export default function NowNextScreen() {
   const [stages, setStages] = useState<any[]>([]);
